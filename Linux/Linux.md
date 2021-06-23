@@ -36,7 +36,9 @@
 
 **绝对路径：**由根目录 **/** 写起，例如：/usr/share/doc 这个目录。
 
-**相对路径：**不是由 / 写起，例如由 /usr/share/doc 要到 /usr/share/man 底下时，可以写成：cd ../man 这就是相对路径的写法啦！
+**相对路径：**不是由 / 写起，例如由 /usr/share/doc 要到 /usr/share/man 底下时
+
+可以写成：cd ../man 这就是相对路径的写法啦！
 
 接下来我们就来看几个常见的处理目录的命令吧：
 
@@ -340,7 +342,7 @@ mvtest
 
 Linux系统是一种典型的多用户系统，不同的用户处于不同的地位，拥有不同的权限。为了保护系统的安全性，Linux系统对不同的用户访问同一文件（包括目录文件）的权限做了不同的规定。
 
-![image-20210620135842241](Linux.assets/image-20210620135842241.png)
+![image-20210620135842241](Linux.assets/image-20210620135842241-1624415915240.png)
 
 在Linux中我们可以使用`ll`或者<font>`ls –l`</font>命令来显示一个文件的属性以及文件所属的用户和组，如：
 
@@ -360,7 +362,7 @@ Linux系统是一种典型的多用户系统，不同的用户处于不同的地
 
 每个文件的属性由左边第一部分的10个字符来确定（如下图）：
 
-![image-20210620135858400](Linux.assets/image-20210620135858400.png)
+![image-20210620135858400](Linux.assets/image-20210620135858400-1624415915241.png)
 
 从左至右用0-9这些数字来表示。
 
@@ -539,9 +541,7 @@ nl [-bnw] 文件
 - b 或 [ctrl]-b ：代表往回翻页，不过这动作只对文件有用，对管线无用。q
 
 ```
-[root@kuangshen etc]# more /etc/csh.login
-....(中间省略)....
---More--(28%) # 重点在这一行喔！你的光标也会在这里等待你的命令
+[root@kuangshen etc]# more /etc/csh.login....(中间省略)....--More--(28%) # 重点在这一行喔！你的光标也会在这里等待你的命令
 ```
 
 
@@ -667,11 +667,14 @@ cat: f3: No such file or directory
 依此您可以做一些相关的测试，可以得到以下全部结论：
 
 - 删除符号连接f3,对f1,f2无影响；
+
 - 删除硬连接f2，对f1,f3也无影响；
+
 - 删除原文件f1，对硬连接f2没有影响，导致符号连接f3失效；
+
 - 同时删除原文件f1,硬连接f2，整个文件会真正的被删除。
 
-	# Vim
+  # Vim
 
 > 什么是Vim编辑器
 
@@ -687,7 +690,7 @@ vim 则可以说是程序开发者的一项很好用的工具。
 
 vim 键盘图：
 
-![图片](Linux.assets/vim.jpg)
+![图片](Linux.assets/vim-1624415915242.jpg)
 
 ## 三种使用模式
 
@@ -740,7 +743,7 @@ vim 键盘图：
 
 简单的说，我们可以将这三个模式想成底下的图标来表示：
 
-![vim工作模式](Linux.assets/vim工作模式.jpg)
+![vim工作模式](Linux.assets/vim工作模式-1624415915242.jpg)
 
 > 上手体验一下，在home目录下测试
 
@@ -752,7 +755,7 @@ vim 键盘图：
 
 然后就会进入文件
 
-![image-20210620170029276](Linux.assets/image-20210620170029276.png)
+![image-20210620170029276](Linux.assets/image-20210620170029276-1624415915242.png)
 
 **按下 i 进入输入模式(也称为编辑模式)，开始编辑文字**
 
@@ -762,7 +765,7 @@ vim 键盘图：
 
 这个时候，键盘上除了 **Esc** 这个按键之外，其他的按键都可以视作为一般的输入按钮了，所以你可以进行任何的编辑。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/uJDAUKrGC7L1I72C1HrwJ9bG6XAbVggMEarICtkr8ia1N6zqcuv3ROj1TBDoMicM5DoYzaGU29qQ2mbQhlBUbbww/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](Linux.assets/640)
 
 **按下 ESC 按钮回到一般模式**
 
@@ -876,9 +879,7 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 - 用户口令的管理。
 - 用户组的管理。
 
-
-
-> 用户账号的管理
+## 用户账号的管理
 
 用户账号的管理工作主要涉及到用户账号的添加、修改和删除。
 
@@ -886,31 +887,28 @@ Linux系统是一个多用户多任务的分时操作系统，任何一个要使
 
 > 添加账号 useradd
 
-```
+```bash
 useradd 选项 用户名
 ```
 
 参数说明：
 
 - 选项 :
-
-- - -c comment 指定一段注释性描述。
+  - -m:	自动建立用户的主目录/home/cjy
+  - -c comment 指定一段注释性描述。
   - -d 目录 指定用户主目录，如果此目录不存在，则同时使用-m选项，可以创建主目录。
   - -g 用户组 指定用户所属的用户组。
   - -G 用户组，用户组 指定用户所属的附加组。
-  - -m　使用者目录如不存在则自动建立。
   - -s Shell文件 指定用户的登录Shell。
   - -u 用户号 指定用户的用户号，如果同时有-o选项，则可以重复使用其他用户的标识号。
-
 - 用户名 :
-
 - - 指定新账号的登录名。
 
-测试：
+测试：创建用户
 
-```
-# 此命令创建了一个用户kuangshen，其中-m选项用来为登录名kuangshen产生一个主目录 /home/kuangshen
+```bash
 [root@kuangshen home]# useradd -m kuangshen
+# 此命令创建了一个用户kuangshen，其中-m选项用来为登录名kuangshen产生一个主目录
 ```
 
 增加用户账号就是在/etc/passwd文件中为新用户增加一条记录，同时更新其他系统文件如/etc/shadow, /etc/group等。
@@ -919,23 +917,39 @@ useradd 选项 用户名
 
 > Linux下如何切换用户
 
-1.切换用户的命令为：su username 【username是你的用户名哦】
+1.切换用户的命令为
 
-2.从普通用户切换到root用户，还可以使用命令：sudo su
+```bash
+su username 【username是你的用户名哦】
+```
 
-3.在终端输入exit或logout或使用快捷方式ctrl+d，可以退回到原来用户，其实ctrl+d也是执行的exit命令
+2.从普通用户切换到root用户
 
-4.在切换用户时，如果想在切换用户之后使用新用户的工作环境，可以在su和username之间加-，例如：【su - root】
+```bash
+sudo su
+```
+
+3.退回原来账户
+
+```bash
+1、exit
+2、logout
+3、快捷方式：ctrl+d	#本质是exit
+```
+
+4.切换用户之后使用新用户的工作环境，可以在su和username之间加-，例如：
+
+```bash
+su - root
+```
 
 $表示普通用户
 
 \#表示超级用户，也就是root用户
 
-
+![image-20210623093505993](../../建设后方防御/Linux/Linux.assets/image-20210623093505993.png)
 
 > 删除帐号
-
-如果一个用户的账号不再使用，可以从系统中删除。
 
 删除用户账号就是要将/etc/passwd等系统文件中的该用户记录删除，必要时还删除用户的主目录。
 
@@ -1009,7 +1023,7 @@ Re-enter new password:*******
 
 如果是超级用户，可以用下列形式指定任何用户的口令：
 
-```
+```bash
 # passwd kuangshen
 New password:*******
 Re-enter new password:*******
@@ -1021,15 +1035,15 @@ Re-enter new password:*******
 
 为用户指定空口令时，执行下列形式的命令：
 
-```
+```bash
 # passwd -d kuangshen
 ```
 
-此命令将用户 kuangshen的口令删除，这样用户 kuangshen下一次登录时，系统就不再允许该用户登录了。
+此命令将用户 kuangshen的口令删除，且用户 kuangshen下一次登录时，系统就不再允许该用户登录了。
 
 passwd 命令还可以用 -l(lock) 选项锁定某一用户，使其不能登录，例如：
 
-```
+```bash
 # passwd -l kuangshen
 ```
 
@@ -1039,7 +1053,9 @@ passwd 命令还可以用 -l(lock) 选项锁定某一用户，使其不能登录
 
 用户组的管理涉及用户组的添加、删除和修改。组的增加、删除和修改实际上就是对/etc/group文件的更新。
 
-> 增加一个新的用户组使用groupadd命令
+### 增加用户组
+
+使用groupadd命令
 
 ```
 groupadd 选项 用户组
@@ -1066,7 +1082,7 @@ groupadd 选项 用户组
 
 此命令向系统中增加了一个新组group2，同时指定新组的组标识号是101。
 
-
+### 删除用户组
 
 > 如果要删除一个已有的用户组，使用groupdel命令
 
@@ -1082,7 +1098,7 @@ groupdel 用户组
 
 此命令从系统中删除组group1。
 
-
+### 修改用户组属性
 
 > 修改用户组的属性使用groupmod命令
 
@@ -1104,7 +1120,7 @@ groupmod -g 102 group2
 groupmod –g 10000 -n group3 group2
 ```
 
-
+### 切换组
 
 > 切换组
 
@@ -1118,13 +1134,15 @@ $ newgrp root
 
 这条命令将当前用户切换到root用户组，前提条件是root用户组确实是该用户的主组或附加组。
 
-
+### 查看用户组信息
 
 > /etc/passwd
 
 完成用户管理的工作有许多种方法，但是每一种方法实际上都是对有关的系统文件进行修改。
 
-与用户和用户组相关的信息都存放在一些系统文件中，这些文件包括/etc/passwd, /etc/shadow, /etc/group等。
+与用户和用户组相关的信息都存放在一些系统文件中
+
+这些文件包括/etc/passwd, /etc/shadow, /etc/group等。
 
 下面分别介绍这些文件的内容。
 
@@ -1134,7 +1152,7 @@ Linux系统中的每个用户都在/etc/passwd文件中有一个对应的记录�
 
 这个文件对所有用户都是可读的。它的内容类似下面的例子：
 
-```
+```bash
 ＃ cat /etc/passwd
 
 root:x:0:0:Superuser:/:
@@ -1151,7 +1169,7 @@ lp:x:71:18:Printer administrator:/usr/spool/lp:
 
 从上面的例子我们可以看到，/etc/passwd中一行记录对应着一个用户，每行记录又被冒号(:)分隔为7个字段，其格式和具体含义如下：
 
-```
+```bash
 用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell
 ```
 
@@ -1260,9 +1278,9 @@ nobody NFS使用
 
    
 
-## 磁盘管理
+# 磁盘管理
 
-> 概述
+### 概述
 
 Linux磁盘管理好坏直接关系到整个系统的性能问题。
 
@@ -1425,8 +1443,8 @@ mount [-t 文件系统] [-L Label名] [-o 额外选项] [-n] 装置文件名 挂
 
 测试：
 
-```
-# 将 /dev/hdc6 挂载到 /mnt/hdc6 上面！
+```bash
+# 将 外部设备 hdc6 挂载到 /mnt/hdc6 上面！
 [root@www ~]# mkdir /mnt/hdc6
 [root@www ~]# mount /dev/hdc6 /mnt/hdc6
 [root@www ~]# df
@@ -1445,11 +1463,57 @@ umount [-fn] 装置文件名或挂载点
 - -f ：强制卸除！可用在类似网络文件系统 (NFS) 无法读取到的情况下；
 - -n ：不升级 /etc/mtab 情况下卸除。
 
-卸载/dev/hdc6
+卸载 hdc6
 
-```
+```bash
 [root@www ~]# umount /dev/hdc6
 ```
+
+# 进程管理
+
+## 进程
+
+- 每个程序有自己的进程，每个进程有一个id号
+- 每个进程有个父进程
+- 进程以两种方式存在：前台；后台
+- 一般服务是后台运行，基本程序是前台运行
+
+	##  命令
+
+### 查看进程 
+
+ps	查看系统中正在执行的各种进程的信息
+
+ps  -xx	:
+
+- -a 显示当前终端运行的所有进程的信息
+- -u 以用户为单位显示进程
+- -x 显示后台运行程序的参数   
+
+```bash
+ps -aux 查看所有进程
+#	| 在linux中叫做管道符   A|B	以A的输出作为B的输入
+# 	grep	查找文件中符合条件的字符串！
+ps -aux|grep mysql	# 代表查看mysql进程相关信息
+```
+
+
+
+ps -ef 	:可以查看父进程的信息
+
+![image-20210623105158721](Linux.assets/image-20210623105158721.png)
+
+pstree -xx
+
+​	-p	：显示父id
+
+​	-u	：显示用户组
+
+
+
+### 结束进程
+
+kill -9 进程的id
 
 # 环境安装
 
@@ -1646,6 +1710,6 @@ https://www.bilibili.com/video/av91821322
 
 ## 域名
 
-![IMG_4093(20210621-212803)](Linux.assets/IMG_4093(20210621-212803).PNG)
+![IMG_4093(../../建设后方防御/Linux/Linux.assets/IMG_4093(20210621-212803).PNG)](Linux.assets/IMG_4093(20210621-212803).PNG)
 
 域名解析后，如果端口是80 -http或者443-https可以直接访问，如果是9000,8080,需要通过apcahe或者nginx做一下反向代理。
