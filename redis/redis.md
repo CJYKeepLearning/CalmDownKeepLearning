@@ -1,4 +1,5 @@
-一、Nosql概述
+# Nosql概述
+
 为什么使用Nosql
 1、单机Mysql时代
 
@@ -67,32 +68,14 @@ Nosql特点
 - 操作，数据定义语言
 - 严格的一致性
 - 基础的事务
-- ...
-1
-2
-3
-4
-5
-6
-7
-8
-Nosql
+  Nosql
 - 不仅仅是数据
 - 没有固定的查询语言
 - 键值对存储，列存储，文档存储，图形数据库（社交关系）
 - 最终一致性
 - CAP定理和BASE
 - 高性能，高可用，高扩展
-- ...
-1
-2
-3
-4
-5
-6
-7
-8
-了解：3V + 3高
+  了解：3V + 3高
 
 大数据时代的3V ：主要是描述问题的
 
@@ -228,9 +211,13 @@ Linux安装
 基本环境安装
 
 yum install gcc-c++
-# 然后进入redis目录下执行
+
+## 然后进入redis目录下执行
+
 make
-# 然后执行
+
+## 然后执行
+
 make install
 1
 2
@@ -276,7 +263,8 @@ redis默认不是后台启动的，需要修改配置文件！
 
 简单测试：
 
-# 测试：100个并发连接 100000请求
+## 测试：100个并发连接 100000请求
+
 redis-benchmark -h localhost -p 6379 -c 100 -n 100000
 1
 2
@@ -301,7 +289,8 @@ OK
 127.0.0.1:6379[8]> dbsize # 查看数据库大小
 (integer) 0
 
-# 不同数据库之间 数据是不能互通的，并且dbsize 是根据库中key的个数。
+## 不同数据库之间 数据是不能互通的，并且dbsize 是根据库中key的个数。
+
 127.0.0.1:6379> set name sakura 
 OK
 127.0.0.1:6379> SELECT 8
@@ -320,34 +309,6 @@ OK
 5) "myset:__rand_int__"
 127.0.0.1:6379> DBSIZE # size和key个数相关
 (integer) 5
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
 keys * ：查看当前数据库中所有的key。
 
 flushdb：清空当前数据库中的键值对。
@@ -478,45 +439,58 @@ Redis的key，通过TTL命令返回key的过期时间，一般来说有3种：
 
 RENAME key newkey修改 key 的名称
 RENAMENX key newkey仅当 newkey 不存在时，将 key 改名为 newkey 。
-更多命令学习：https://www.redis.net.cn/order/
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-wBVZtGVm-1597890996517)(狂神说 Redis.assets/image-20200813114228439.png)]
+# String(字符串)
+## 知识点
 
-String(字符串)
-普通的set、get直接略过。
+- 应用
+  - 计数器
+  - 统计多单位的数量：uid:123666：follow 0
+  - 粉丝数
+  - 对象存储缓存
 
-命令	描述	示例
-APPEND key value	向指定的key的value后追加字符串	127.0.0.1:6379> set msg hello OK 127.0.0.1:6379> append msg " world" (integer) 11 127.0.0.1:6379> get msg “hello world”
-DECR/INCR key	将指定key的value数值进行+1/-1(仅对于数字)	127.0.0.1:6379> set age 20 OK 127.0.0.1:6379> incr age (integer) 21 127.0.0.1:6379> decr age (integer) 20
-INCRBY/DECRBY key n	按指定的步长对数值进行加减	127.0.0.1:6379> INCRBY age 5 (integer) 25 127.0.0.1:6379> DECRBY age 10 (integer) 15
-INCRBYFLOAT key n	为数值加上浮点型数值	127.0.0.1:6379> INCRBYFLOAT age 5.2 “20.2”
-STRLEN key	获取key保存值的字符串长度	127.0.0.1:6379> get msg “hello world” 127.0.0.1:6379> STRLEN msg (integer) 11
-GETRANGE key start end	按起止位置获取字符串（闭区间，起止位置都取）	127.0.0.1:6379> get msg “hello world” 127.0.0.1:6379> GETRANGE msg 3 9 “lo worl”
-SETRANGE key offset value	用指定的value 替换key中 offset开始的值	127.0.0.1:6379> SETRANGE msg 2 hello (integer) 7 127.0.0.1:6379> get msg “tehello”
-GETSET key value	将给定 key 的值设为 value ，并返回 key 的旧值(old value)。	127.0.0.1:6379> GETSET msg test “hello world”
-SETNX key value	仅当key不存在时进行set	127.0.0.1:6379> SETNX msg test (integer) 0 127.0.0.1:6379> SETNX name sakura (integer) 1
-SETEX key seconds value	set 键值对并设置过期时间	127.0.0.1:6379> setex name 10 root OK 127.0.0.1:6379> get name (nil)
-MSET key1 value1 [key2 value2..]	批量set键值对	127.0.0.1:6379> MSET k1 v1 k2 v2 k3 v3 OK
-MSETNX key1 value1 [key2 value2..]	批量设置键值对，仅当参数中所有的key都不存在时执行	127.0.0.1:6379> MSETNX k1 v1 k4 v4 (integer) 0
-MGET key1 [key2..]	批量获取多个key保存的值	127.0.0.1:6379> MGET k1 k2 k3 1) “v1” 2) “v2” 3) “v3”
-PSETEX key milliseconds value	和 SETEX 命令相似，但它以毫秒为单位设置 key 的生存时间，	
-getset key value	如果不存在值，则返回nil，如果存在值，获取原来的值，并设置新的值	
-String类似的使用场景：value除了是字符串还可以是数字，用途举例：
+## 命令
 
-计数器
-统计多单位的数量：uid:123666：follow 0
-粉丝数
-对象存储缓存
-List(列表)
-Redis列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素到列表的头部（左边）或者尾部（右边）
-
-一个列表最多可以包含 232 - 1 个元素 (4294967295, 每个列表超过40亿个元素)。
-
-首先我们列表，可以经过规则定义将其变为队列、栈、双端队列等
+| 命令                               | 描述                                                         | 示例                                       |
+| ---------------------------------- | ------------------------------------------------------------ | ------------------------------------------ |
+| APPEND key value                   | 向指定的key的value后追加字符串                               | *set msg hello* <br/>*append  msg  world*  |
+| DECR/INCR key                      | 将指定key的value数值进行+1/-1(仅对于数字)                    | *set age 20*<br/>*incr age*<br/>*decr age* |
+| INCRBY/DECRBY key n                | 按指定的步长对数值进行加减                                   | *INCRBY age 5*<br/>*DECRBY age 10*<br/>    |
+| INCRBYFLOAT key n                  | 为数值加上浮点型数值                                         | INCRBYFLOAT age 5.2                        |
+| STRLEN key                         | 获取key保存值的字符串长度                                    | STRLEN msg                                 |
+| GETRANGE key start end             | 按起止位置获取字符串 [start,end]                             | GETRANGE msg 3 9                           |
+| SETRANGE key offset value          | 用指定的value 替换key中 offset开始的值                       | SETRANGE msg 2 hello                       |
+| GETSET key value                   | 将给定 key 的值设为 value ，并返回 key 的旧值(old value)。   | GETSET msg test                            |
+| SETNX key value                    | 仅当key不存在时进行set                                       | SETNX msg test                             |
+| SETEX key seconds value            | set 键值对并设置过期时间                                     | setex name 10 root                         |
+| MSET key1 value1 [key2 value2..]   | 批量set键值对                                                | MSET k1 v1 k2 v2 k3 v3                     |
+| MSETNX key1 value1 [key2 value2..] | 批量设置键值对，仅当参数中所有的key都不存在时执行            | MSETNX k1 v1 k4 v4                         |
+| MGET key1 [key2..]                 | 批量获取多个key保存的值                                      | MGET k1 k2 k3                              |
+| PSETEX key milliseconds value      | 和 SETEX 命令相似，但它以毫秒为单位设置 key 的生存时间       |                                            |
+| getset key value                   | 如果不存在值，则返回nil，如果存在值，获取原来的值，并设置新的值 |                                            |
 
 
 
-正如图Redis中List是可以进行双端操作的，所以命令也就分为了LXXX和RLLL两类，有时候L也表示List例如LLEN
+# List(列表)
+
+## 知识点
+
+- Redis列表是简单的字符串列表，按照插入顺序排序。
+- 可以添加一个元素到列表的头部（左边）或者尾部（右边）
+
+- 一个列表最多可以包含 2<sup>3</sup> - 1 个元素 (4294967295, 每个列表超过40亿个元素)。
+
+
+- 经过规则定义将其变为队列、栈、双端队列等
+
+
+- 正如图Redis中List是可以进行双端操作的，所以命令也就分为了LXXX和RLLL两类，有时候L也表示List例如LLEN
+- 应用：
+  - 消息排队
+  - 消息队列（Lpush Rpop）
+  - 栈（Lpush Lpop）
+
+## 命令
 
 命令	描述
 LPUSH/RPUSH key value1[value2..]	从左边/右边向列表中PUSH值(一个或者多个)。
@@ -532,6 +506,8 @@ LTRIM key start end	通过下标截取指定范围内的列表
 LREM key count value	List中是允许value重复的 count > 0：从头部开始搜索 然后删除指定的value 至多删除count个 count < 0：从尾部开始搜索… count = 0：删除列表中所有的指定value。
 BLPOP/BRPOP key1[key2] timout	移出并获取列表的第一个/最后一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。
 BRPOPLPUSH source destination timeout	和RPOPLPUSH功能相同，如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。
+
+```java
 ---------------------------LPUSH---RPUSH---LRANGE--------------------------------
 
 127.0.0.1:6379> LPUSH mylist k1 # LPUSH mylist=>{1}
@@ -661,135 +637,9 @@ newlist: k1
 1) "newlist"
 2) "test"
 (12.54s)
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
+
+```
+
 小结
 
 list实际上是一个链表，before Node after , left, right 都可以插入值
@@ -802,17 +652,14 @@ list实际上是一个链表，before Node after , left, right 都可以插入�
 
 在两边插入或者改动值，效率最高！修改中间元素，效率相对较低
 
-应用：
 
-消息排队！消息队列（Lpush Rpop）,栈（Lpush Lpop）
 
-# Set(集合)
+# Set(无序集合)
 
 ## 知识点
 
-- Redis的Set是string类型的无序集合。集合成员是唯一的，这就意味着集合中不能出现重复的数据。
-
-- Redis 中 集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是O(1)。
+- string类型的**无序集合**，**成员唯一**
+- 通过哈希表实现的，所以添加，删除，查找的复杂度都是O(1)。
 
 
 - 集合中最大的成员数为 2<sup>32</sup> - 1 (4294967295), 每个集合可存储40多亿个成员)。
@@ -929,27 +776,30 @@ list实际上是一个链表，before Node after , left, right 都可以插入�
 ## 知识点
 
 - Redis hash 是一个string类型的field和value的映射表，hash特别适合用于存储对象。
-
+- key1-<key2,value>
 - Set就是一种简化的Hash,只变动key,而value使用默认值填充。可以将一个Hash表作为一个对象进行存储，表中存放对象的信息。
+- 应用
+  - 变更数据，存储user
 
 
 ## 命令
 
-命令	描述
-HSET key field value	将哈希表 key 中的字段 field 的值设为 value 。重复设置同一个field会覆盖,返回0
-HMSET key field1 value1 [field2 value2..]	同时将多个 field-value (域-值)对设置到哈希表 key 中。
-HSETNX key field value	只有在字段 field 不存在时，设置哈希表字段的值。
-HEXISTS key field	查看哈希表 key 中，指定的字段是否存在。
-HGET key field value	获取存储在哈希表中指定字段的值
-HMGET key field1 [field2..]	获取所有给定字段的值
-HGETALL key	获取在哈希表key 的所有字段和值
-HKEYS key	获取哈希表key中所有的字段
-HLEN key	获取哈希表中字段的数量
-HVALS key	获取哈希表中所有值
-HDEL key field1 [field2..]	删除哈希表key中一个/多个field字段
-HINCRBY key field n	为哈希表 key 中的指定字段的整数值加上增量n，并返回增量后结果 一样只适用于整数型字段
-HINCRBYFLOAT key field n	为哈希表 key 中的指定字段的浮点数值加上增量 n。
-HSCAN key cursor [MATCH pattern] [COUNT count]	迭代哈希表中的键值对。
+| 命令                                           | 描述                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------ |
+| HSET key field value                           | 将哈希表 key 中的字段 field 的值设为 value 。重复设置同一个field会覆盖,返回0 |
+| HMSET key field1 value1 [field2 value2..]      | 同时将多个 field-value (域-值)对设置到哈希表 key 中。        |
+| HSETNX key field value                         | 只有在字段 field 不存在时，设置哈希表字段的值。              |
+| HEXISTS key field                              | 查看哈希表 key 中，指定的字段是否存在。                      |
+| HGET key field value                           | 获取存储在哈希表中指定字段的值                               |
+| HMGET key field1 [field2..]                    | 获取所有给定字段的值                                         |
+| HGETALL key                                    | 获取在哈希表key 的所有字段和值                               |
+| HKEYS key                                      | 获取哈希表key中所有的字段                                    |
+| HLEN key                                       | 获取哈希表中字段的数量                                       |
+| HVALS key                                      | 获取哈希表中所有值                                           |
+| HDEL key field1 [field2..]                     | 删除哈希表key中一个/多个field字段                            |
+| HINCRBY key field n                            | 为哈希表 key 中的指定字段的整数值加上增量n，并返回增量后结果 一样只适用于整数型字段 |
+| HINCRBYFLOAT key field n                       | 为哈希表 key 中的指定字段的浮点数值加上增量 n。              |
+| HSCAN key cursor [MATCH pattern] [COUNT count] | 迭代哈希表中的键值对                                         |
 
 ```java
 ------------------------HSET--HMSET--HSETNX----------------
@@ -1031,12 +881,16 @@ OK
 
 ## 知识点
 
-- 不同的是每个元素都会关联一个double类型的分数（score）。redis正是通过分数来为集合中的成员进行从小到大的排序。
-
+- zset  k1  score1  v1
+- 每个元素都会关联一个double类型的分数（score）。redis正是通过分数来为集合中的成员进行从小到大的排序。
 - score相同：按字典顺序排序
 
 
 - 有序集合的成员是唯一的,但分数(score)却可以重复。
+- 应用
+
+  - set排序，存储班级成绩表，工资表排序
+  - 普通消息 1 ，重要消息2， 带权重进行判断
 
 
 ## 命令
@@ -1063,6 +917,8 @@ ZREVRANK key member	返回有序集合中指定成员的排名，有序集成员
 ZINTERSTORE destination numkeys key1 [key2 ..]	计算给定的一个或多个有序集的交集并将结果集存储在新的有序集合 key 中，numkeys：表示参与运算的集合数，将score相加作为结果的score
 ZUNIONSTORE destination numkeys key1 [key2..]	计算给定的一个或多个有序集的交集并将结果集存储在新的有序集合 key 中
 ZSCAN key cursor [MATCH pattern\] [COUNT count]	迭代有序集合中的元素（包括元素成员和元素分值）
+
+```java
 -------------------ZADD--ZCARD--ZCOUNT--------------
 127.0.0.1:6379> ZADD myzset 1 m1 2 m2 3 m3 # 向有序集合myzset中添加成员m1 score=1 以及成员m2 score=2..
 (integer) 2
@@ -1199,182 +1055,46 @@ ZSCAN key cursor [MATCH pattern\] [COUNT count]	迭代有序集合中的元素�
 4) "87"
 5) "xh"
 6) "93"
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-应用案例：
+```
 
-set排序 存储班级成绩表 工资表排序！
-普通消息，1.重要消息 2.带权重进行判断
-排行榜应用实现，取Top N测试
-四、三种特殊数据类型
-Geospatial(地理位置)
-使用经纬度定位地理坐标并用一个有序集合zset保存，所以zset命令也可以使用
 
-命令	描述
-geoadd key longitud(经度) latitude(纬度) member [..]	将具体经纬度的坐标存入一个有序集合
-geopos key member [member..]	获取集合中的一个/多个成员坐标
-geodist key member1 member2 [unit]	返回两个给定位置之间的距离。默认以米作为单位。
-georadius key longitude latitude radius m|km|mi|ft [WITHCOORD][WITHDIST] [WITHHASH] [COUNT count]	以给定的经纬度为中心， 返回集合包含的位置元素当中， 与中心的距离不超过给定最大距离的所有位置元素。
-GEORADIUSBYMEMBER key member radius...	功能与GEORADIUS相同，只是中心位置不是具体的经纬度，而是使用结合中已有的成员作为中心点。
-geohash key member1 [member2..]	返回一个或多个位置元素的Geohash表示。使用Geohash位置52点整数编码。
-有效经纬度
+# 三种特殊数据类型
 
-有效的经度从-180度到180度。
-有效的纬度从-85.05112878度到85.05112878度。
-指定单位的参数 unit 必须是以下单位的其中一个：
+## Geospatial(地理位置)
 
-m 表示单位为米。
+### 知识点
 
-km 表示单位为千米。
+- 使用经纬度定位地理坐标并用一个有序集合zset保存，所以zset命令也可以使用
+- 有效经纬度
+  - 有效的经度从-180度到180度。
+  - 有效的纬度从-85.05112878度到85.05112878度。
 
-mi 表示单位为英里。
+- 指定单位的参数 unit 必须是以下单位的其中一个：
+  - m 表示单位为米。
+  - km 表示单位为千米。
+  - mi 表示单位为英里。
+  - ft 表示单位为英尺。
 
-ft 表示单位为英尺。
+- 关于GEORADIUS的参数
+  - withcoord:带上坐标
+  - withdist:带上距离，单位与半径单位相同
+  - COUNT n : 只显示前n个(按距离递增排序)
 
-关于GEORADIUS的参数
+- 应用
+  - 附近的人
 
-通过georadius就可以完成 附近的人功能
+### 命令
 
-withcoord:带上坐标
+| 命令                                                         | 描述                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| geoadd key longitud(经度) latitude(纬度) member [..]         | 将具体经纬度的坐标存入一个有序集合                           |
+| geopos key member [member..]                                 | 获取集合中的一个/多个成员坐标                                |
+| geodist key member1 member2 [unit]                           | 返回两个给定位置之间的距离。默认以米作为单位。               |
+| georadius key longitude latitude radius m\|km\|mi\|ft \[WITHCOORD\][WITHDIST] [WITHHASH] [COUNT count] | 以给定的经纬度为中心， 返回集合包含的位置元素当中， 与中心的距离不超过给定最大距离的所有位置元素。 |
+| GEORADIUSBYMEMBER key member radius...                       | 功能与GEORADIUS相同，只是中心位置不是具体的经纬度，而是使用结合中已有的成员作为中心点。 |
+| geohash key member1 [member2..]                              | 返回一个或多个位置元素的Geohash表示。使用Geohash位置52点整数编码。 |
 
-withdist:带上距离，单位与半径单位相同
-
-COUNT n : 只显示前n个(按距离递增排序)
-
+```bash
 ----------------georadius---------------------
 127.0.0.1:6379> GEORADIUS china:city 120 30 500 km withcoord withdist # 查询经纬度(120,30)坐标500km半径内的成员
 1) 1) "hangzhou"
@@ -1390,44 +1110,39 @@ COUNT n : 只显示前n个(按距离递增排序)
 127.0.0.1:6379> geohash china:city yichang shanghai # 获取成员经纬坐标的geohash表示
 1) "wmrjwbr5250"
 2) "wtw6ds0y300"
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-Hyperloglog(基数统计)
-Redis HyperLogLog 是用来做基数统计的算法，HyperLogLog 的优点是，在输入元素的数量或者体积非常非常大时，计算基数所需的空间总是固定的、并且是很小的。
+```
 
-花费 12 KB 内存，就可以计算接近 2^64 个不同元素的基数。
+## Hyperloglog(基数统计)
 
-因为 HyperLogLog 只会根据输入元素来计算基数，而不会储存输入元素本身，所以 HyperLogLog 不能像集合那样，返回输入的各个元素。
+### 知识点
 
-其底层使用string数据类型
+- 基数统计,在输入元素的数量或者体积非常非常大时，计算基数所需的空间总是固定的、并且是很小的。
 
-什么是基数？
+  花费 12 KB 内存，就可以计算接近 2<sup>64</sup> 个不同元素的基数。
 
-数据集中不重复的元素的个数。
+- 因为 HyperLogLog 只会根据输入元素来计算基数，而不会储存输入元素本身，所以 HyperLogLog 不能像集合那样，返回输入的各个元素。
 
-应用场景：
+- 其底层使用string数据类型
 
-网页的访问量（UV）：一个用户多次访问，也只能算作一个人。
 
-传统实现，存储用户的id,然后每次进行比较。当用户变多之后这种方式及其浪费空间，而我们的目的只是计数，Hyperloglog就能帮助我们利用最小的空间完成。
+- 什么是基数？
 
-命令	描述
-PFADD key element1 [elememt2..]	添加指定元素到 HyperLogLog 中
-PFCOUNT key [key]	返回给定 HyperLogLog 的基数估算值。
-PFMERGE destkey sourcekey [sourcekey..]	将多个 HyperLogLog 合并为一个 HyperLogLog
+  - 数据集中不重复的元素的个数。
+
+- 传统实现，存储用户的id,然后每次进行比较。当用户变多之后这种方式及其浪费空间，而我们的目的只是计数，Hyperloglog就能帮助我们利用最小的空间完成。
+- 应用场景：
+  - 网页的访问量（UV）：一个用户多次访问，也只能算作一个人。
+  - 签到统计、状态统计
+
+### 命令
+
+| 命令                                    | 描述                                      |
+| --------------------------------------- | ----------------------------------------- |
+| PFADD key element1 [elememt2..]         | 添加指定元素到 HyperLogLog 中             |
+| PFCOUNT key [key]                       | 返回给定 HyperLogLog 的基数估算值。       |
+| PFMERGE destkey sourcekey [sourcekey..] | 将多个 HyperLogLog 合并为一个 HyperLogLog |
+
+```bash
 ----------PFADD--PFCOUNT---------------------
 127.0.0.1:6379> PFADD myelemx a b c d e f g h i j k # 添加元素
 (integer) 1
@@ -1445,42 +1160,34 @@ string
 OK
 127.0.0.1:6379> PFCOUNT myelemz # 估算基数
 (integer) 17
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
+```
+
 如果允许容错，那么一定可以使用Hyperloglog !
 
 如果不允许容错，就使用set或者自己的数据类型即可 ！
 
-BitMaps(位图)
-使用位存储，信息状态只有 0 和 1
+## BitMaps(位图)
 
-Bitmap是一串连续的2进制数字（0或1），每一位所在的位置为偏移(offset)，在bitmap上可执行AND,OR,XOR,NOT以及其它位操作。
+### 知识点
 
-应用场景
+- 使用位存储，信息状态只有 0 和 1
 
-签到统计、状态统计
+- Bitmap是一串连续的2进制数字（0或1），每一位所在的位置为偏移(offset)，在bitmap上可执行AND,OR,XOR,NOT以及其它位操作。
+- bitmap的底层是一串从左到右的二进制串
+- 应用
+  - 统计用户信息  活跃/不活跃   登录/未登录 
 
-命令	描述
-setbit key offset value	为指定key的offset位设置值
-getbit key offset	获取offset位的值
-bitcount key [start end]	统计字符串被设置为1的bit数，也可以指定统计范围按字节
-bitop operration destkey key[key..]	对一个或多个保存二进制位的字符串 key 进行位元操作，并将结果保存到 destkey 上。
-BITPOS key bit [start] [end]	返回字符串里面第一个被设置为1或者0的bit位。start和end只能按字节,不能按位
+### 命令
+
+| 命令                                | 描述                                                         |
+| ----------------------------------- | ------------------------------------------------------------ |
+| setbit key offset value             | 为指定key的offset位设置值                                    |
+| getbit key offset                   | 获取offset位的值                                             |
+| bitcount key [start end]            | 统计字符串被设置为1的bit数，也可以指定统计范围按字节         |
+| bitop operration destkey key[key..] | 对一个或多个保存二进制位的字符串 key 进行位元操作，并将结果保存到 destkey 上。 |
+| BITPOS key bit [start] [end]        | 返回字符串里面第一个被设置为1或者0的bit位。start和end只能按字节,不能按位 |
+
+```bash
 ------------setbit--getbit--------------
 127.0.0.1:6379> setbit sign 0 1 # 设置sign的第0位为 1 
 (integer) 0
@@ -1503,54 +1210,33 @@ string
 -----------bitcount----------------------------
 127.0.0.1:6379> BITCOUNT sign # 统计sign中为1的位数
 (integer) 4
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-bitmaps的底层
+```
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-9PlszjhS-1597890996519)(D:\我\MyBlog\狂神说 Redis.assets\image-20200803234336175.png)]
+# 事务
 
-这样设置以后你能get到的值是：\xA2\x80，所以bitmaps是一串从左到右的二进制串
+- redis事务不能保证原子性,Redis的单条命令保证原子性的
 
-五、事务
-Redis的单条命令是保证原子性的，但是redis事务不能保证原子性
+- Redis事务本质：一组命令的集合。
 
-Redis事务本质：一组命令的集合。
 
------------------ 队列 set set set 执行 -------------------
+- 事务中每条命令都会被序列化，执行过程中按顺序执行，不允许其他命令进行干扰。
+  - 一次性、顺序性、排他性
+- Redis事务没有隔离级别的概念
+- Redis事务操作过程
+  - 开启事务（multi）
+  - 命令入队
+  - 执行事务（exec）
+    所以事务中的命令在加入时都没有被执行，直到提交时才会开始执行(Exec)一次性完成。
 
-事务中每条命令都会被序列化，执行过程中按顺序执行，不允许其他命令进行干扰。
+| 命令    | 解释     |
+| ------- | -------- |
+| multi   | 开启事务 |
+| exec    | 执行事务 |
+| discard | 放弃事务 |
 
-一次性
-顺序性
-排他性
-Redis事务没有隔离级别的概念
-Redis单条命令是保证原子性的，但是事务不保证原子性！
-Redis事务操作过程
-开启事务（multi）
-命令入队
-执行事务（exec）
-所以事务中的命令在加入时都没有被执行，直到提交时才会开始执行(Exec)一次性完成。
 
+
+```bash
 127.0.0.1:6379> multi # 开启事务
 OK
 127.0.0.1:6379> set k1 v1 # 命令入队
@@ -1571,28 +1257,11 @@ QUEUED
 5) 1) "k3"
    2) "k2"
    3) "k1"
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-取消事务(discurd)
+```
 
+取消事务
+
+```bash
 127.0.0.1:6379> multi
 OK
 127.0.0.1:6379> set k1 v1
@@ -1605,21 +1274,11 @@ OK
 (error) ERR EXEC without MULTI # 当前未开启事务
 127.0.0.1:6379> get k1 # 被放弃事务中命令并未执行
 (nil)
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-事务错误
-代码语法错误（编译时异常）所有的命令都不执行
+```
 
+事务错误
+
+```bash
 127.0.0.1:6379> multi
 OK
 127.0.0.1:6379> set k1 v1
@@ -1634,22 +1293,28 @@ QUEUED
 (error) EXECABORT Transaction discarded because of previous errors. # 执行报错
 127.0.0.1:6379> get k1 
 (nil) # 其他命令并没有被执行
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-代码逻辑错误 (运行时异常) **其他命令可以正常执行 ** >>> 所以不保证事务原子性
 
+```
+
+```bash
+127.0.0.1:6379> multi
+OK
+127.0.0.1:6379> set k1 v1
+QUEUED
+127.0.0.1:6379> set k2 v2
+QUEUED
+127.0.0.1:6379> error k1 # 这是一条语法错误命令
+(error) ERR unknown command `error`, with args beginning with: `k1`, # 会报错但是不影响后续命令入队 
+127.0.0.1:6379> get k2
+QUEUED
+127.0.0.1:6379> EXEC
+(error) EXECABORT Transaction discarded because of previous errors. # 执行报错
+127.0.0.1:6379> get k1 
+(nil) # 其他命令并没有被执行
+
+```
+
+```bash
 127.0.0.1:6379> multi
 OK
 127.0.0.1:6379> set k1 v1
@@ -1668,37 +1333,31 @@ QUEUED
 
 # 虽然中间有一条命令报错了，但是后面的指令依旧正常执行成功了。
 # 所以说Redis单条指令保证原子性，但是Redis事务不能保证原子性。
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-监控
-悲观锁：
+```
+
+虽然中间有一条命令报错了，但是后面的指令依旧正常执行成功了。
+
+所以说Redis单条指令保证原子性，但是Redis事务不能保证原子性。
+
+
+# 监控
+## 悲观锁：
 
 很悲观，认为什么时候都会出现问题，无论做什么都会加锁
-乐观锁：
+
+## 乐观锁：
 
 很乐观，认为什么时候都不会出现问题，所以不会上锁！更新数据的时候去判断一下，在此期间是否有人修改过这个数据
-获取version
-更新的时候比较version
-使用watch key监控指定数据，相当于乐观锁加锁。
+
+MYSQL：
+
+​	获取version
+​	更新的时候比较version
+​	使用watch key监控指定数据，相当于乐观锁加锁。
 
 正常执行
 
+```bash
 127.0.0.1:6379> set money 100 # 设置余额:100
 OK
 127.0.0.1:6379> set use 0 # 支出使用:0
@@ -1714,27 +1373,16 @@ QUEUED
 127.0.0.1:6379> exec # 监视值没有被中途修改，事务正常执行
 1) (integer) 80
 2) (integer) 20
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
+
+```
+
 测试多线程修改值，使用watch可以当做redis的乐观锁操作（相当于getversion）
 
 我们启动另外一个客户端模拟插队线程。
 
 线程1：
 
+```bash
 127.0.0.1:6379> watch money # money上锁
 OK
 127.0.0.1:6379> multi
@@ -1744,23 +1392,18 @@ QUEUED
 127.0.0.1:6379> INCRBY use 20
 QUEUED
 127.0.0.1:6379> 	# 此时事务并没有执行
-1
-2
-3
-4
-5
-6
-7
-8
-9
+```
+
 模拟线程插队，线程2：
 
+```bash
 127.0.0.1:6379> INCRBY money 500 # 修改了线程一中监视的money
 (integer) 600
-1
-2
+```
+
 回到线程1，执行事务：
 
+```bash
 127.0.0.1:6379> EXEC # 执行之前，另一个线程修改了我们的值，这个时候就会导致事务执行失败
 (nil) # 没有结果，说明事务执行失败
 
@@ -1768,24 +1411,21 @@ QUEUED
 "600"
 127.0.0.1:6379> get use # 线程1事务执行失败，数值没有被修改
 "0"
-1
-2
-3
-4
-5
-6
-7
-解锁获取最新值，然后再加锁进行事务。
+```
 
-unwatch进行解锁。
+> 解锁获取最新值，然后再加锁进行事务。
+>
+> `unwatch`进行解锁。
 
 注意：每次提交执行exec后都会自动释放锁，不管是否成功
 
-六、Jedis
-使用Java来操作Redis，Jedis是Redis官方推荐使用的Java连接redis的客户端。
+![image-20210703132604961](redis.assets/image-20210703132604961.png)
 
-导入依赖
+# Jedis
 
+- 使用Java来操作Redis，Jedis是Redis官方推荐使用的Java连接redis的客户端。
+
+```xml
 <!--导入jredis的包-->
 <dependency>
     <groupId>redis.clients</groupId>
@@ -1798,18 +1438,9 @@ unwatch进行解锁。
     <artifactId>fastjson</artifactId>
     <version>1.2.70</version>
 </dependency>
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
+```
+
+
 编码测试
 
 连接数据库
@@ -1857,17 +1488,11 @@ public class TestPing {
         System.out.println(response); // PONG
     }
 }
-1
-2
-3
-4
-5
-6
-7
 断开连接
 
-事务
+## 事务
 
+```java
 public class TestTX {
     public static void main(String[] args) {
         Jedis jedis = new Jedis("39.99.xxx.xx", 6379);
@@ -1895,193 +1520,155 @@ public class TestTX {
         }
     }
 }
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-七、SpringBoot整合
-导入依赖
+```
+
+
+
+# SpringBoot整合
+
+## 1.导入依赖
+
+```xm
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-redis</artifactId>
 </dependency>
-1
-2
-3
-4
-springboot 2.x后 ，原来使用的 Jedis 被 lettuce 替换。
+```
 
-jedis：采用的直连，多个线程操作的话，是不安全的。如果要避免不安全，使用jedis pool连接池！更像BIO模式
+**springboot 2.x后 ，原来使用的 Jedis 被 lettuce 替换。**
 
-lettuce：采用netty，实例可以在多个线程中共享，不存在线程不安全的情况！可以减少线程数据了，更像NIO模式
-
-我们在学习SpringBoot自动配置的原理时，整合一个组件并进行配置一定会有一个自动配置类xxxAutoConfiguration,并且在spring.factories中也一定能找到这个类的完全限定名。Redis也不例外。
+- jedis：采用的直连，多个线程操作的话，是不安全的。如果要避免不安全，使用jedis pool连接池！更像BIO模式
 
 
+- lettuce：采用netty，实例可以在多个线程中共享，不存在线程不安全的情况！可以减少线程数据了，更像NIO模式
+
+
+- 我们在学习SpringBoot自动配置的原理时，整合一个组件并进行配置一定会有一个自动配置类xxxAutoConfiguration,并且在spring.factories中也一定能找到这个类的完全限定名。Redis也不例外。
+
+![在这里插入图片描述](redis.assets/20200513214531573.png)
 
 那么就一定还存在一个RedisProperties类
 
-
+![在这里插入图片描述](redis.assets/20200513214554661.png)
 
 之前我们说SpringBoot2.x后默认使用Lettuce来替换Jedis，现在我们就能来验证了。
 
 先看Jedis:
 
-
+![在这里插入图片描述](redis.assets/20200513214607475.png)
 
 @ConditionalOnClass注解中有两个类是默认不存在的，所以Jedis是无法生效的
 
 然后再看Lettuce：
 
-
+![在这里插入图片描述](redis.assets/20200513214618179.png)
 
 完美生效。
 
 现在我们回到RedisAutoConfiguratio
 
-
+![img](redis.assets/2020051321462777.png)
 
 只有两个简单的Bean
 
-RedisTemplate
-StringRedisTemplate
+- RedisTemplate
+- StringRedisTemplate
+
 当看到xxTemplate时可以对比RestTemplat、SqlSessionTemplate,通过使用这些Template来间接操作组件。那么这俩也不会例外。分别用于操作Redis和Redis中的String数据类型。
 
-在RedisTemplate上也有一个条件注解，说明我们是可以对其进行定制化的
+**在RedisTemplate上也有一个条件注解，说明我们是可以对其进行定制化的**
 
 说完这些，我们需要知道如何编写配置文件然后连接Redis，就需要阅读RedisProperties
 
-
+![在这里插入图片描述](redis.assets/20200513214638238.png)
 
 这是一些基本的配置属性。
 
-
+![在这里插入图片描述](redis.assets/20200513214649380.png)
 
 还有一些连接池相关的配置。注意使用时一定使用Lettuce的连接池。
 
+![在这里插入图片描述](redis.assets/20200513214700372.png)
 
+## 2.编写配置文件
 
-编写配置文件
-
+```properties
 # 配置redis
 spring.redis.host=39.99.xxx.xx
 spring.redis.port=6379
-1
-2
-3
-使用RedisTemplate
+```
 
+## 3.使用RedisTemplate
+
+```java
 @SpringBootTest
 class Redis02SpringbootApplicationTests {
 
     @Autowired
     private RedisTemplate redisTemplate;
-    
+
     @Test
     void contextLoads() {
-    
+
         // redisTemplate 操作不同的数据类型，api和我们的指令是一样的
         // opsForValue 操作字符串 类似String
         // opsForList 操作List 类似List
         // opsForHah
-    
+
         // 除了基本的操作，我们常用的方法都可以直接通过redisTemplate操作，比如事务和基本的CRUD
-    
+
         // 获取连接对象
         //RedisConnection connection = redisTemplate.getConnectionFactory().getConnection();
         //connection.flushDb();
         //connection.flushAll();
-    
+
         redisTemplate.opsForValue().set("mykey","kuangshen");
         System.out.println(redisTemplate.opsForValue().get("mykey"));
     }
 }
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-测试结果
+
+```
+
+## 4.测试结果
 
 此时我们回到Redis查看数据时候，惊奇发现全是乱码，可是程序中可以正常输出：
 
-
+![在这里插入图片描述](redis.assets/20200513214734520.png)
 
  这时候就关系到存储对象的序列化问题，在网络中传输的对象也是一样需要序列化，否者就全是乱码。
 
 我们转到看那个默认的RedisTemplate内部什么样子：
 
-
+![在这里插入图片描述](redis.assets/20200513214746506.png)
 
 在最开始就能看到几个关于序列化的参数。
 
 默认的序列化器是采用JDK序列化器
 
-
+![在这里插入图片描述](redis.assets/20200513214757247.png)
 
 而默认的RedisTemplate中的所有序列化器都是使用这个序列化器：
 
-
+![在这里插入图片描述](redis.assets/20200513214809494.png)
 
 后续我们定制RedisTemplate就可以对其进行修改。
 
 RedisSerializer提供了多种序列化方案：
 
-直接调用RedisSerializer的静态方法来返回序列化器，然后set
+1. 直接调用RedisSerializer的静态方法来返回序列化器，然后set
 
 
+![在这里插入图片描述](redis.assets/20200513214818682.png)
 
-自己new 相应的实现类，然后set
+2.自己new 相应的实现类，然后set
 
+![在这里插入图片描述](redis.assets/20200513214827233.png)
 
-
-定制RedisTemplate的模板：
+## 5.定制RedisTemplate的模板：
 
 我们创建一个Bean加入容器，就会触发RedisTemplate上的条件注解使默认的RedisTemplate失效。
 
+```java
 @Configuration
 public class RedisConfig {
 
@@ -2105,35 +1692,11 @@ public class RedisConfig {
         return template;
     }
 }
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
+```
+
 这样一来，只要实体类进行了序列化，我们存什么都不会有乱码的担忧了。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-oc8kJP08-1597890996523)(狂神说 Redis.assets/image-20200817175638086.png)]
-
-八、自定义Redis工具类
-使用RedisTemplate需要频繁调用.opForxxx然后才能进行对应的操作，这样使用起来代码效率低下，工作中一般不会这样使用，而是将这些常用的公共API抽取出来封装成为一个工具类，然后直接使用工具类来间接操作Redis,不但效率高并且易用。
+自定义Redis工具类使用RedisTemplate需要频繁调用.opForxxx然后才能进行对应的操作，这样使用起来代码效率低下，工作中一般不会这样使用，而是将这些常用的公共API抽取出来封装成为一个工具类，然后直接使用工具类来间接操作Redis,不但效率高并且易用。
 
 工具类参考博客：
 
@@ -2141,26 +1704,26 @@ https://www.cnblogs.com/zeng1994/p/03303c805731afc9aa9c60dbbd32a323.html
 
 https://www.cnblogs.com/zhzhlong/p/11434284.html
 
-九、Redis.conf
+# Redis.conf
 容量单位不区分大小写，G和GB有区别
 
-
+![image-20210711145701192](redis.assets/image-20210711145701192.png)
 
 可以使用 include 组合多个配置问题
 
-
+![image-20210711145724265](redis.assets/image-20210711145724265.png)
 
 网络配置
 
-
+![image-20210711145827020](redis.assets/image-20210711145827020.png)
 
 日志输出级别
 
-
+![image-20210711145903705](redis.assets/image-20210711145903705.png)
 
 日志输出文件
 
-
+![image-20210711145913731](redis.assets/image-20210711145913731.png)
 
 持久化规则
 
@@ -2171,43 +1734,50 @@ https://www.cnblogs.com/zhzhlong/p/11434284.html
 RDB
 AOF
 
+![在这里插入图片描述](redis.assets/20200513214944964.png)
+
 
 RDB文件相关
 
+![在这里插入图片描述](redis.assets/20200513214955679.png)
 
 
 
+![在这里插入图片描述](redis.assets/20200513215006207.png)
 
 主从复制
 
-
+![在这里插入图片描述](redis.assets/20200513215016371.png)
 
 Security模块中进行密码设置
 
-
+![在这里插入图片描述](redis.assets/20200513215026143.png)
 
 客户端连接相关
 
+```bash
 maxclients 10000  最大客户端数量
 maxmemory <bytes> 最大内存限制
-maxmemory-policy noeviction # 内存达到限制值的处理策略
-1
-2
-3
+maxmemory-policy noeviction # 内存达到限制值的处理
+```
+
+
 redis 中的默认的过期策略是 volatile-lru 。
 
 设置方式
 
+```bash
 config set maxmemory-policy volatile-lru 
-1
-maxmemory-policy 六种方式
-**1、volatile-lru：**只对设置了过期时间的key进行LRU（默认值）
+```
+
+**maxmemory-policy 六种方式**
+1、volatile-lru：只对设置了过期时间的key进行LRU（默认值）
 
 2、allkeys-lru ： 删除lru算法的key
 
-**3、volatile-random：**随机删除即将过期key
+3、volatile-random：随机删除即将过期key
 
-**4、allkeys-random：**随机删除
+4、allkeys-random：随机删除
 
 5、volatile-ttl ： 删除即将过期的
 
@@ -2215,23 +1785,22 @@ maxmemory-policy 六种方式
 
 AOF相关部分
 
+![在这里插入图片描述](redis.assets/20200513215037918.png)
 
+# 持久化—RDB(Redis Database)
 
-
-
-十、持久化—RDB
 RDB：Redis Databases
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-C0mm1D4A-1597890996524)(狂神说 Redis.assets/image-20200818122236614.png)]
-
 什么是RDB
-在指定时间间隔后，将内存中的数据集快照写入数据库 ；在恢复时候，直接读取快照文件，进行数据的恢复 ；
+在指定时间间隔后，将内存中的数据集快照写入数据库 ；
 
+在恢复时候，直接读取快照文件，进行数据的恢复
 
+![image-20210712150547218](redis.assets/image-20210712150547218.png)
 
 默认情况下， Redis 将数据库快照保存在名字为 dump.rdb的二进制文件中。文件名可以在配置文件中进行自定义。
 
-工作原理
+**工作原理**
 在进行 RDB 的时候，redis 的主线程是不会做 io 操作的，主线程会 fork 一个子线程来完成该操作；
 
 Redis 调用forks。同时拥有父进程和子进程。
@@ -2239,18 +1808,29 @@ Redis 调用forks。同时拥有父进程和子进程。
 当子进程完成对新 RDB 文件的写入时，Redis 用新 RDB 文件替换原来的 RDB 文件，并删除旧的 RDB 文件。
 这种工作方式使得 Redis 可以从写时复制（copy-on-write）机制中获益(因为是使用子进程进行写操作，而父进程依然可以接收来自客户端的请求。)
 
+![在这里插入图片描述](redis.assets/20200513215141519.jpg)
+
+**触发机制**
+
+- save的规则满足的情况下，会自动触发rdb原则
+- 执行flushall命令，也会触发我们的rdb原则
+- 退出redis，也会自动产生rdb文件
 
 
-触发机制
-save的规则满足的情况下，会自动触发rdb原则
-执行flushall命令，也会触发我们的rdb原则
-退出redis，也会自动产生rdb文件
-save
-使用 save 命令，会立刻对当前内存中的数据进行持久化 ,但是会阻塞，也就是不接受其他操作了；
 
-由于 save 命令是同步命令，会占用Redis的主进程。若Redis数据非常多时，save命令执行速度会非常慢，阻塞所有客户端的请求。
+**恢复rdb文件**
 
+- 将rdb放在redis启动目录就可以，redis启动的时候自动检查dump.rdb
 
+- 查看需要存在的位置
+
+  ```bash
+  config get dir
+  "dir"
+  "/usr/local/bin"	#如果在这个目录下存在dump.rdb文件，启动就会自动恢复其中的数据
+  ```
+
+  
 
 flushall命令
 flushall 命令也会触发持久化 ；
@@ -2260,115 +1840,131 @@ flushall 命令也会触发持久化 ；
 
 可以通过配置文件对 Redis 进行设置， 让它在“ N 秒内数据集至少有 M 个改动”这一条件被满足时， 自动进行数据集保存操作。
 
+save
 
+![在这里插入图片描述](redis.assets/20200513215150892.jpg)
 
+使用 save 命令，会立刻对当前内存中的数据进行持久化 ,但是会阻塞，也就是不接受其他操作了；
 
+由于 save 命令是同步命令，会占用Redis的主进程。若Redis数据非常多时，save命令执行速度会非常慢，阻塞所有客户端的请求。
 
 bgsave
+
 bgsave 是异步进行，进行持久化的时候，redis 还可以将继续响应客户端请求 ；
 
+![在这里插入图片描述](redis.assets/2020051321523151.jpg)
+
+| bgsave和save对比 |                    |                                  |
+| ---------------- | ------------------ | -------------------------------- |
+| 命令             | save               | bgsave                           |
+| IO类型           | 同步               | 异步                             |
+| 阻塞？           | 是                 | 是（阻塞发生在fock()，通常非常快 |
+| 复杂度           | O(n)               | O(n)                             |
+| 优点             | 不会消耗额外的内存 | 不阻塞客户端命令                 |
+| 缺点             | 阻塞客户端命令     | 需要fock子进程，消耗内存         |
 
 
-bgsave和save对比
-
-命令	save	bgsave
-IO类型	同步	异步
-阻塞？	是	是（阻塞发生在fock()，通常非常快）
-复杂度	O(n)	O(n)
-优点	不会消耗额外的内存	不阻塞客户端命令
-缺点	阻塞客户端命令	需要fock子进程，消耗内存
-优缺点
+**优缺点**
 优点：
 
-适合大规模的数据恢复
-对数据的完整性要求不高
+- 适合大规模的数据恢复
+- 对数据的完整性要求不高
+
 缺点：
 
-需要一定的时间间隔进行操作，如果redis意外宕机了，这个最后一次修改的数据就没有了。
-fork进程的时候，会占用一定的内容空间。
-十一、持久化AOF
+- 需要一定的时间间隔进行操作，如果redis意外宕机了，这个最后一次修改的数据就没有了。
+  fork进程的时候，会占用一定的内容空间。
+
+# 持久化AOF(Append Only File)
+
 Append Only File
 
-将我们所有的命令都记录下来，history，恢复的时候就把这个文件全部再执行一遍
+将我们所有的"写命令"记录下来，history，恢复的时候就把这个文件全部再执行一遍
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Z8wr9lBW-1597890996525)(狂神说 Redis.assets/image-20200818123711375.png)]
+
 
 以日志的形式来记录每个写的操作，将Redis执行过的所有指令记录下来（读操作不记录），只许追加文件但不可以改写文件，redis启动之初会读取该文件重新构建数据，换言之，redis重启的话就根据日志文件的内容将写指令从前到后执行一次以完成数据的恢复工作。
 
-什么是AOF
- 快照功能（RDB）并不是非常耐久（durable）： 如果 Redis 因为某些原因而造成故障停机， 那么服务器将丢失最近写入、以及未保存到快照中的那些数据。 从 1.1 版本开始， Redis 增加了一种完全耐久的持久化方式： AOF 持久化。
+## 什么是AOF
 
-如果要使用AOF，需要修改配置文件：
+快照功能（RDB）并不是非常耐久（durable）： 如果 Redis 因为某些原因而造成故障停机， 那么服务器将丢失最近写入、以及未保存到快照中的那些数据。 从 1.1 版本开始， Redis 增加了一种完全耐久的持久化方式： AOF 持久化。
 
-
+**如果要使用AOF，需要修改配置文件：**
 
 appendonly no yes则表示启用AOF
 
 默认是不开启的，我们需要手动配置，然后重启redis，就可以生效了！
 
-如果这个aof文件有错位，这时候redis是启动不起来的，我需要修改这个aof文件
+**修改这个aof文件**
 
-redis给我们提供了一个工具redis-check-aof --fix
+如果这个aof文件有错位，这时候redis是启动不起来的，需要修改这个aof文件
 
-优点和缺点
+redis给我们提供了一个工具
 
+```bash
+redis-check-aof --fix appendonly.aof
+```
+
+**重写规则说明**
+
+aof默认文件的无限追加，文件会越来越大。
+
+![image-20210712145736491](redis.assets/image-20210712145736491.png)
+
+
+
+**优点和缺点**
+
+```bash 
 appendonly yes  # 默认是不开启aof模式的，默认是使用rdb方式持久化的，在大部分的情况下，rdb完全够用
 appendfilename "appendonly.aof"
-
-# appendfsync always # 每次修改都会sync 消耗性能
+appendfsync always # 每次修改都会sync 消耗性能
 appendfsync everysec # 每秒执行一次 sync 可能会丢失这一秒的数据
-# appendfsync no # 不执行 sync ,这时候操作系统自己同步数据，速度最快
-1
-2
-3
-4
-5
-6
-优点
+appendfsync no # 不执行 sync ,这时候操作系统自己同步数据，速度最快
+```
 
-每一次修改都会同步，文件的完整性会更加好
-没秒同步一次，可能会丢失一秒的数据
-从不同步，效率最高
-缺点
+**优点**
 
-相对于数据文件来说，aof远远大于rdb，修复速度比rdb慢！
-Aof运行效率也要比rdb慢，所以我们redis默认的配置就是rdb持久化
-十二、RDB和AOP选择
-RDB 和 AOF 对比
-RDB	AOF	
-启动优先级	低	高
-体积	小	大
-恢复速度	快	慢
-数据安全性	丢数据	根据策略决定
-如何选择使用哪种持久化方式？
+- 每一次修改都会同步，文件的完整性会更加好
+- 每秒同步一次，可能会丢失一秒的数据
+  从不同步，效率最高
+
+**缺点**
+
+- 相对于数据文件来说，aof远远大于rdb，修复速度比rdb慢！
+- Aof运行效率也要比rdb慢，所以我们redis默认的配置就是rdb持久化
+
+# RDB和AOF选择
+
+**RDB和 AOF 对比** 
+![image-20210712151037206](redis.assets/image-20210712151037206.png)
+
+**如何选择使用哪种持久化方式？**
 一般来说， 如果想达到足以媲美 PostgreSQL 的数据安全性， 你应该同时使用两种持久化功能。
 
 如果你非常关心你的数据， 但仍然可以承受数分钟以内的数据丢失， 那么你可以只使用 RDB 持久化。
 
 有很多用户都只使用 AOF 持久化， 但并不推荐这种方式： 因为定时生成 RDB 快照（snapshot）非常便于进行数据库备份， 并且 RDB 恢复数据集的速度也要比 AOF 恢复的速度要快。
 
-十三、Redis发布与订阅
+# Redis发布与订阅
+
 Redis 发布订阅(pub/sub)是一种消息通信模式：发送者(pub)发送消息，订阅者(sub)接收消息。
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-IBT2pjCa-1597890996526)(狂神说 Redis.assets/image-20200818162849693.png)]
 
-下图展示了频道 channel1 ， 以及订阅这个频道的三个客户端 —— client2 、 client5 和 client1 之间的关系：
+
+下图展示了频道 channel1 ， 以及订阅这个频道的三个客户端 —— client2 、 client5 和 client1 之间的关系：![在这里插入图片描述](redis.assets/20200513215523258.png)
 
 
 
 当有新消息通过 PUBLISH 命令发送给频道 channel1 时， 这个消息就会被发送给订阅它的三个客户端：
 
-
+![在这里插入图片描述](redis.assets/2020051321553483.png)
 
 命令
-命令	描述
-PSUBSCRIBE pattern [pattern..]	订阅一个或多个符合给定模式的频道。
-PUNSUBSCRIBE pattern [pattern..]	退订一个或多个符合给定模式的频道。
-PUBSUB subcommand [argument[argument]]	查看订阅与发布系统状态。
-PUBLISH channel message	向指定频道发布消息
-SUBSCRIBE channel [channel..]	订阅给定的一个或多个频道。
-SUBSCRIBE channel [channel..]	退订一个或多个频道
+![image-20210712160807833](redis.assets/image-20210712160807833.png)
 示例
+
+```bash
 ------------订阅端----------------------
 127.0.0.1:6379> SUBSCRIBE sakura # 订阅sakura频道
 Reading messages... (press Ctrl-C to quit) # 等待接收消息
@@ -2386,37 +1982,18 @@ Reading messages... (press Ctrl-C to quit) # 等待接收消息
 127.0.0.1:6379> PUBLISH sakura "hello world" # 发布消息到sakura频道
 (integer) 1
 127.0.0.1:6379> PUBLISH sakura "hello i am sakura" # 发布消息
-(integer) 1
+(integer) 1s
 
 -----------------查看活跃的频道------------
 127.0.0.1:6379> PUBSUB channels
 1) "sakura"
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
+
+```
+
 原理
 每个 Redis 服务器进程都维持着一个表示服务器状态的 redis.h/redisServer 结构， 结构的 pubsub_channels 属性是一个字典， 这个字典就用于保存订阅频道的信息，其中，字典的键为正在被订阅的频道， 而字典的值则是一个链表， 链表中保存了所有订阅这个频道的客户端。
 
-
+![在这里插入图片描述](redis.assets/2020051321554964.png)
 
 客户端订阅，就被链接到对应频道的链表的尾部，退订则就是将客户端节点从链表中移除。
 
@@ -2428,59 +2005,44 @@ Reading messages... (press Ctrl-C to quit) # 等待接收消息
 多人在线聊天室。
 稍微复杂的场景，我们就会使用消息中间件MQ处理。
 
-十四、Redis主从复制
-概念
- 主从复制，是指将一台Redis服务器的数据，复制到其他的Redis服务器。前者称为主节点（Master/Leader）,后者称为从节点（Slave/Follower）， 数据的复制是单向的！只能由主节点复制到从节点（主节点以写为主、从节点以读为主）。
+# Redis主从复制
+
+**概念**
+ 主从复制，是指将一台Redis服务器的数据，复制到其他的Redis服务器。前者称为主节点（Master/Leader）,后者称为从节点（Slave/Follower）， 数据的复制是单向的！只能由主节点复制到从节点（==主==节点以==写==为主、==从==节点以==读==为主），读写分离。
 
 默认情况下，每台Redis服务器都是主节点，一个主节点可以有0个或者多个从节点，但每个从节点只能由一个主节点。
 
-作用
-数据冗余：主从复制实现了数据的热备份，是持久化之外的一种数据冗余的方式。
-故障恢复：当主节点故障时，从节点可以暂时替代主节点提供服务，是一种服务冗余的方式
-负载均衡：在主从复制的基础上，配合读写分离，由主节点进行写操作，从节点进行读操作，分担服务器的负载；尤其是在多读少写的场景下，通过多个从节点分担负载，提高并发量。
-高可用基石：主从复制还是哨兵和集群能够实施的基础。
-为什么使用集群
-单台服务器难以负载大量的请求
-单台服务器故障率高，系统崩坏概率大
-单台服务器内存容量有限。
-环境配置
+**作用**
+
+- 数据冗余：主从复制实现了数据的热备份，是持久化之外的一种数据冗余的方式。
+- 故障恢复：当主节点故障时，从节点可以暂时替代主节点提供服务，是一种服务冗余的方式
+- 负载均衡：在主从复制的基础上，配合读写分离，由主节点进行写操作，从节点进行读操作，分担服务器的负载；尤其是在多读少写的场景下，通过多个从节点分担负载，提高并发量。
+- 高可用基石：主从复制还是哨兵和集群能够实施的基础。
+
+**为什么使用集群**
+
+- 单台服务器难以负载大量的请求
+- 单台服务器故障率高，系统崩坏概率大
+- 单台服务器内存容量有限。
+
+**环境配置**
 我们在讲解配置文件的时候，注意到有一个replication模块 (见Redis.conf中第8条)
 
 查看当前库的信息：info replication
 
-127.0.0.1:6379> info replication
-# Replication
-role:master # 角色
-connected_slaves:0 # 从机数量
-master_replid:3b54deef5b7b7b7f7dd8acefa23be48879b4fcff
-master_replid2:0000000000000000000000000000000000000000
-master_repl_offset:0
-second_repl_offset:-1
-repl_backlog_active:0
-repl_backlog_size:1048576
-repl_backlog_first_byte_offset:0
-repl_backlog_histlen:0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
+
 既然需要启动多个服务，就需要多个配置文件。每个配置文件对应修改以下信息：
 
-端口号
-pid文件名
-日志文件名
-rdb文件名
-启动单机多服务集群：
+1. 端口号
+2. pid文件名
+3. 日志文件名
+4. rdb文件名
 
+**启动单机多服务集群**：
 
+先将原来的shutdown，再 redis-server fconfig/redis80.conf
+
+![在这里插入图片描述](redis.assets/20200513215610163.png)
 
 一主二从配置
 ==默认情况下，每台Redis服务器都是主节点；==我们一般情况下只用配置从机就好了！
@@ -2489,86 +2051,112 @@ rdb文件名
 
 使用SLAVEOF host port就可以为从机配置主机了。
 
-
+![image-20210712170912505](redis.assets/image-20210712170912505.png)
 
 然后主机上也能看到从机的状态：
 
+![image-20210712212853224](redis.assets/image-20210712212853224.png)
 
-
-我们这里是使用命令搭建，是暂时的，==真实开发中应该在从机的配置文件中进行配置，==这样的话是永久的。
-
-
+我们这里是使用命令搭建，是暂时的**真实开发中应该在从机的配置文件中进行配置**的话是永久的。
 
 使用规则
 从机只能读，不能写，主机可读可写但是多用于写。
 
- 127.0.0.1:6381> set name sakura # 从机6381写入失败
-(error) READONLY You can't write against a read only replica.
+![image-20210712210705521](redis.assets/image-20210712210705521.png)
 
-127.0.0.1:6380> set name sakura # 从机6380写入失败
-(error) READONLY You can't write against a read only replica.
+ ```bash
+ *****************主机*******************
+ 127.0.0.1:6379> set foling cjy
+ OK
+ 127.0.0.1:6379> keys *
+ 1) "foling"
+ 2) "k3"
+ 3) "k1"
+ 4) "k2"
+ *****************从机*******************
+ 127.0.0.1:6380> keys *
+ 1) "foling"
+ 2) "k2"
+ 3) "k1"
+ 4) "k3"
+ 127.0.0.1:6380> set k4 v4
+ (error) READONLY You can't write against a read only replica.
+ ```
 
-127.0.0.1:6379> set name sakura
-OK
-127.0.0.1:6379> get name
-"sakura"
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+**复制原理**
+
+slave启动成功连接到master后会发送一个sync同步命令
+
+master接到命令后，启动后台的存盘进程，同时收集所有接收到的用于修改数据集命令，在后台进程执行完毕之后，master将传送整个文件到slave，并完成一次完全同步。
+
+全量复制：slave服务在接收到数据库文件数据后，将其存盘并加载到内存中
+
+增量复制：master继续将新的所有收集到的修改命令依次传给slave，完成同步，但是只要是重新连接master，一次完全同步将会被自动执行。
+
+
+
 当主机断电宕机后，默认情况下从机的角色不会发生变化 ，集群中只是失去了写操作，当主机恢复以后，又会连接上从机恢复原状。
 
 当从机断电宕机后，若不是使用配置文件配置的从机，再次启动后作为主机是无法获取之前主机的数据的，若此时重新配置称为从机，又可以获取到主机的所有数据。这里就要提到一个同步原理。
 
-第二条中提到，默认情况下，主机故障后，不会出现新的主机，有两种方式可以产生新的主机：
+第二条中提到，默认情况下，主机故障后，不会出现新的主机
 
-从机手动执行命令slaveof no one,这样执行以后从机会独立出来成为一个主机
+**有两种方式可以产生新的主机**：
+
+从机手动执行命令
+
+```bash
+slaveof no one
+```
+
+这样执行以后从机会独立出来成为一个主机
 使用哨兵模式（自动选举）
 如果没有老大了，这个时候能不能选择出来一个老大呢？手动！
 
-如果主机断开了连接，我们可以使用SLAVEOF no one让自己变成主机！其他的节点就可以手动连接到最新的主节点（手动）！如果这个时候老大修复了，那么久重新连接！
+如果主机断开了连接，我们可以使用SLAVEOF no one让自己变成主机！其他的节点就可以手动连接到最新的主节点（手动）！如果这个时候老大修复了，那么就重新连接！
 
-十五、哨兵模式
+
+
+# 哨兵模式
+
 更多信息参考博客：https://www.jianshu.com/p/06ab9daf921d
 
-**主从切换技术的方法是：当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造成一段时间内服务不可用。*这不是一种推荐的方式，更多时候，我们优先考虑*哨兵模式。
+主从切换技术的方法是：当主服务器宕机后，需要手动把一台从服务器切换为主服务器，这就需要人工干预，费事费力，还会造成一段时间内服务不可用。这不是一种推荐的方式，更多时候，我们优先考虑哨兵模式。
 
 单机单个哨兵
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-2ENYVAPp-1597890996527)(狂神说 Redis.assets/image-20200818233231154.png)]
-
-哨兵的作用：
+**哨兵的作用**：
 
 通过发送命令，让Redis服务器返回监控其运行状态，包括主服务器和从服务器。
 当哨兵监测到master宕机，会自动将slave切换成master，然后通过发布订阅模式通知其他的从服务器，修改配置文件，让它们切换主机。
 多哨兵模式
 
-[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-Ga1RyfVc-1597890996528)(狂神说 Redis.assets/image-20200818233316478.png)]
 
-哨兵的核心配置
 
+**哨兵的核心配置**
+
+1.创建一个sentinel.conf
+
+在文件中输入
+
+```bash
 sentinel monitor mymaster 127.0.0.1 6379 1
+```
 
-数字1表示 ：当一个哨兵主观认为主机断开，就可以客观认为主机故障，然后开始选举新的主机。
+数字1表示 ：当一个哨兵主观认为主机断开，就可以客观认为主机故障，然后开始选举新的主机,票数最多的成为主机。
 测试
 
-redis-sentinel xxx/sentinel.conf
+```bash
+redis-sentinel xxx/sentinel.conf #启动哨兵模式
+```
 
-成功启动哨兵模式
-
-
+![在这里插入图片描述](redis.assets/20200513215752444.png)
 
 此时哨兵监视着我们的主机6379，当我们断开主机后：
 
+![在这里插入图片描述](redis.assets/20200513215806972.png)
 
-
-哨兵模式优缺点
+**哨兵模式优缺点**
 
 优点：
 
@@ -2583,39 +2171,40 @@ Redis不好在线扩容，集群容量一旦达到上限，在线扩容就十分
 
 完整的哨兵模式配置文件 sentinel.conf
 
+```bash
 # Example sentinel.conf
-
+ 
 # 哨兵sentinel实例运行的端口 默认26379
 port 26379
-
+ 
 # 哨兵sentinel的工作目录
 dir /tmp
-
+ ************************重要配置************************
 # 哨兵sentinel监控的redis主节点的 ip port 
 # master-name  可以自己命名的主节点名字 只能由字母A-z、数字0-9 、这三个字符".-_"组成。
 # quorum 当这些quorum个数sentinel哨兵认为master主节点失联 那么这时 客观上认为主节点失联了
 # sentinel monitor <master-name> <ip> <redis-port> <quorum>
 sentinel monitor mymaster 127.0.0.1 6379 1
-
+  ************************重要配置************************
 # 当在Redis实例中开启了requirepass foobared 授权密码 这样所有连接Redis实例的客户端都要提供密码
 # 设置哨兵sentinel 连接主从的密码 注意必须为主从设置一样的验证密码
 # sentinel auth-pass <master-name> <password>
 sentinel auth-pass mymaster MySUPER--secret-0123passw0rd
-
-
+ 
+ 
 # 指定多少毫秒之后 主节点没有应答哨兵sentinel 此时 哨兵主观上认为主节点下线 默认30秒
 # sentinel down-after-milliseconds <master-name> <milliseconds>
 sentinel down-after-milliseconds mymaster 30000
-
+ 
 # 这个配置项指定了在发生failover主备切换时最多可以有多少个slave同时对新的master进行 同步，
 这个数字越小，完成failover所需的时间就越长，
 但是如果这个数字越大，就意味着越 多的slave因为replication而不可用。
 可以通过将这个值设为 1 来保证每次只有一个slave 处于不能处理命令请求的状态。
 # sentinel parallel-syncs <master-name> <numslaves>
 sentinel parallel-syncs mymaster 1
-
  
-
+ 
+ 
 # 故障转移的超时时间 failover-timeout 可以用在以下这些方面： 
 #1. 同一个sentinel对同一个master两次failover之间的间隔时间。
 #2. 当一个slave从一个错误的master那里同步数据开始计算时间。直到slave被纠正为向正确的master那里同步数据时。
@@ -2624,16 +2213,16 @@ sentinel parallel-syncs mymaster 1
 # 默认三分钟
 # sentinel failover-timeout <master-name> <milliseconds>
 sentinel failover-timeout mymaster 180000
-
+ 
 # SCRIPTS EXECUTION
-
+ 
 #配置当某一事件发生时所需要执行的脚本，可以通过脚本来通知管理员，例如当系统运行不正常时发邮件通知相关人员。
 #对于脚本的运行结果有以下规则：
 #若脚本执行后返回1，那么该脚本稍后将会被再次执行，重复次数目前默认为10
 #若脚本执行后返回2，或者比2更高的一个返回值，脚本将不会重复执行。
 #如果脚本在执行过程中由于收到系统中断信号被终止了，则同返回值为1时的行为相同。
 #一个脚本的最大执行时间为60s，如果超过这个时间，脚本将会被一个SIGKILL信号终止，之后重新执行。
-
+ 
 #通知型脚本:当sentinel有任何警告级别的事件发生时（比如说redis实例的主观失效和客观失效等等），将会去调用这个脚本，
 #这时这个脚本应该通过邮件，SMS等方式去通知系统管理员关于系统不正常运行的信息。调用该脚本时，将传给脚本两个参数，
 #一个是事件的类型，
@@ -2642,7 +2231,7 @@ sentinel failover-timeout mymaster 180000
 #通知脚本
 # sentinel notification-script <master-name> <script-path>
   sentinel notification-script mymaster /var/redis/notify.sh
-
+ 
 # 客户端重新配置主节点参数脚本
 # 当一个master由于failover而发生改变时，这个脚本将会被调用，通知相关的客户端关于master地址已经发生改变的信息。
 # 以下参数将会在调用脚本时传给脚本:
@@ -2653,139 +2242,73 @@ sentinel failover-timeout mymaster 180000
 # 这个脚本应该是通用的，能被多次调用，不是针对性的。
 # sentinel client-reconfig-script <master-name> <script-path>
 sentinel client-reconfig-script mymaster /var/redis/reconfig.sh
+```
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-十六、缓存穿透与雪崩
-缓存穿透（查不到）
-概念
+
+
+# 缓存穿透与雪崩
+
+## 缓存穿透（查不到）
+**概念**
 
 在默认情况下，用户请求数据时，会先在缓存(Redis)中查找，若没找到即缓存未命中，再在数据库中进行查找，数量少可能问题不大，可是一旦大量的请求数据（例如秒杀场景）缓存都没有命中的话，就会全部转移到数据库上，造成数据库极大的压力，就有可能导致数据库崩溃。网络安全中也有人恶意使用这种手段进行攻击被称为洪水攻击。
 
-解决方案
+![image-20210713104355003](redis.assets/image-20210713104355003.png)
+
+**解决方案**
 
 布隆过滤器
 
 对所有可能查询的参数以Hash的形式存储，以便快速确定是否存在这个值，在控制层先进行拦截校验，校验不通过直接打回，减轻了存储系统的压力。
 
-
+![image-20210713104524115](redis.assets/image-20210713104524115.png)
 
 缓存空对象
 
 一次请求若在缓存和数据库中都没找到，就在缓存中方一个空对象用于处理后续这个请求。
 
-
+![image-20210713104543370](redis.assets/image-20210713104543370.png)
 
  这样做有一个缺陷：存储空对象也需要空间，大量的空对象会耗费一定的空间，存储效率并不高。解决这个缺陷的方式就是设置较短过期时间
 
 即使对空值设置了过期时间，还是会存在缓存层和存储层的数据会有一段时间窗口的不一致，这对于需要保持一致性的业务会有影响。
 
-缓存击穿（量太大，缓存过期）
-概念
+## 缓存击穿（量太大，缓存过期）
+**概念**
 
  相较于缓存穿透，缓存击穿的目的性更强，一个存在的key，在缓存过期的一刻，同时有大量的请求，这些请求都会击穿到DB，造成瞬时DB请求量大、压力骤增。这就是缓存被击穿，只是针对其中某个key的缓存不可用而导致击穿，但是其他的key依然可以使用缓存响应。
 
  比如热搜排行上，一个热点新闻被同时大量访问就可能导致缓存击穿。
 
-解决方案
+**解决方案**
 
-设置热点数据永不过期
+- 设置热点数据永不过期
 
-这样就不会出现热点数据过期的情况，但是当Redis内存空间满的时候也会清理部分数据，而且此种方案会占用空间，一旦热点数据多了起来，就会占用部分空间。
+  ​	这样就不会出现热点数据过期的情况，但是当Redis内存空间满的时候也会清理部分数据，而且此种方案会占用空间，一旦热点数据多了起来，就会占用部分空间。
 
-加互斥锁(分布式锁)
+- 加互斥锁(分布式锁)
 
-在访问key之前，采用SETNX（set if not exists）来设置另一个短期key来锁住当前key的访问，访问结束再删除该短期key。保证同时刻只有一个线程访问。这样对锁的要求就十分高。
+  ​	在访问key之前，采用SETNX（set if not exists）来设置另一个短期key来锁住当前key的访问，访问结束再删除该短期key。保证同时刻只有一个线程访问。这样对锁的要求就十分高。
 
-缓存雪崩
-概念
+  ![image-20210713104857519](redis.assets/image-20210713104857519.png)
+
+## 缓存雪崩
+**概念**
 
 大量的key设置了相同的过期时间，导致在缓存在同一时刻全部失效，造成瞬时DB请求量大、压力骤增，引起雪崩。
 
+![image-20210713104954633](redis.assets/image-20210713104954633.png)
 
+**解决方案**
 
-解决方案
+- redis高可用
 
-redis高可用
+  ​	这个思想的含义是，既然redis有可能挂掉，那我多增设几台redis，这样一台挂掉之后其他的还可以继续工作，其实就是搭建的集群
 
-这个思想的含义是，既然redis有可能挂掉，那我多增设几台redis，这样一台挂掉之后其他的还可以继续工作，其实就是搭建的集群
+- 限流降级
 
-限流降级
+  ​	这个解决方案的思想是，在缓存失效后，通过加锁或者队列来控制读数据库写缓存的线程数量。比如对某个key只允许一个线程查询数据和写缓存，其他线程等待。
 
-这个解决方案的思想是，在缓存失效后，通过加锁或者队列来控制读数据库写缓存的线程数量。比如对某个key只允许一个线程查询数据和写缓存，其他线程等待。
+- 数据预热
 
-数据预热
-
-数据加热的含义就是在正式部署之前，我先把可能的数据先预先访问一遍，这样部分可能大量访问的数据就会加载到缓存中。在即将发生大并发访问前手动触发加载缓存不同的key，设置不同的过期时间，让缓存失效的时间点尽量均匀。
-————————————————
-版权声明：本文为CSDN博主「每天进步一點點」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/DDDDeng_/article/details/108118544
+  ​	数据加热的含义就是在正式部署之前，我先把可能的数据先预先访问一遍，这样部分可能大量访问的数据就会加载到缓存中。在即将发生大并发访问前手动触发加载缓存不同的key，设置不同的过期时间，让缓存失效的时间点尽量均匀。
