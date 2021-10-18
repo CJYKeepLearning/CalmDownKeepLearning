@@ -133,7 +133,13 @@ model.addAttribute("users",users);
 
 视图解析与模板引擎
 
-## 拦截器
+# 拦截器
+
+[spring拦截器](https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web.html#spring-web)
+
+## 是什么？
+
+ java里的拦截器是动态拦截Action调用的对象，它提供了一种机制可以使开发者在一个Action执行的前后执行一段代码，也可以在一个Action执行前阻止其执行，同时也提供了一种可以提取Action中可重用部分代码的方式。在AOP中，拦截器用于在某个方法或者字段被访问之前，进行拦截，然后再之前或者之后加入某些操作。
 
 ### 1、handlerInterceptor
 
@@ -153,9 +159,15 @@ model.addAttribute("users",users);
 
 
 
-源码分析：
+## 路径匹配
 
+```java
+registry.addInterceptor(new SessionInterceptor()).addPathPatterns("/**");
+```
 
+- /\*\*	:匹配所有路径
+- /admin/\*\*  :匹配/admin/下的所有路径
+- /admin/\*    : 只匹配/admin/user,不匹配/admin/user/info
 
 ## 文件上传
 
@@ -226,4 +238,10 @@ form标签中不知道为什么使用thymeleaf语法不能解析。
 什么是通用mapper，一句话简单说，它就是个辅助mybatis极简单表开发的组件。它不是为了替代mybatis，而是让mybatis的开发更方便。
 
 在yaml中整合mybatis时，不用配置mapper-locations
+
+# Mybatis Generator
+
+终端执行：
+
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 
