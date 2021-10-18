@@ -1,3 +1,5 @@
+# Sum
+
 1.空格问题
 
 ```bash
@@ -50,5 +52,40 @@ array=(a b c d)
 ```bash
 ls -R
 tree
+```
+
+# Exercises
+
+1. Write bash functions `marco` and `polo` that do the following. Whenever you execute `marco` the current working directory should be saved in some manner, then when you execute `polo`, no matter what directory you are in, `polo` should `cd` you back to the directory where you executed `marco`. For ease of debugging you can write the code in a file `marco.sh` and (re)load the definitions to your shell by executing `source marco.sh`.
+
+```bash
+ #!/bin/bash
+ marco(){
+     # >> 右边为字符串
+     echo "$(pwd)" > $HOME/marco_history.log
+ }
+ polo(){
+     cd "$(cat "$HOME/marco_history.log")"
+ } 
+```
+
+```bash
+ #!/bin/bash
+ marco() {
+     export MARCO=$(pwd)
+ }
+ polo() {
+     cd "$MARCO"
+ }
+```
+
+```bash
+ #!/bin/bash
+ marco(){
+        echo "$(pwd)" >> "/home/foling/missing-semester/log.txt"
+}
+ polo(){
+        cd "$(cat "/home/foling/missing-semester/log.txt" | tail -n1)"
+}
 ```
 
