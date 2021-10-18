@@ -212,45 +212,44 @@ Linux安装
 
 yum install gcc-c++
 
-## 然后进入redis目录下执行
+然后进入redis目录下执行
 
 make
 
-## 然后执行
+然后执行
 
 make install
-1
-2
-3
-4
-5
 
 
 redis默认安装路径 /usr/local/bin
 
 将redis的配置文件复制到 程序安装目录 /usr/local/bin/kconfig下
 
-
-
 redis默认不是后台启动的，需要修改配置文件！
 
-
+![image-20210904151840468](redis.assets/image-20210904151840468.png)
 
 通过制定的配置文件启动redis服务
 
-
+```ba
+redis-server /usr/local/bin/myconfig/redis.conf
+```
 
 使用redis-cli连接指定的端口号测试，Redis的默认端口6379
 
-
+```bash
+redis-cli -p 6379
+```
 
 查看redis进程是否开启
 
 
 
-关闭Redis服务 shutdown
+关闭Redis服务 
 
-
+```bash
+shutdown
+```
 
 再次查看进程是否存在
 
@@ -259,28 +258,46 @@ redis默认不是后台启动的，需要修改配置文件！
 测试性能
 **redis-benchmark：**Redis官方提供的性能测试工具，参数选项如下：
 
-
+![image-20210904152009695](redis.assets/image-20210904152009695.png)
 
 简单测试：
 
-## 测试：100个并发连接 100000请求
+测试：100个并发连接 100000请求
 
+```bash
+# 当前命令表示，性能测试，在本机，端口号6379，并发连接数100，每个连接10w个请求数量
 redis-benchmark -h localhost -p 6379 -c 100 -n 100000
-1
-2
+# 测试结果如下，以Redis的set命令为例
+====== SET ======
+  100000 requests completed in 1.85 seconds # 十万个请求在1.85秒之内被处理
+  100 parallel clients # 每次请求都有100个客户端在执行
+  3 bytes payload # 一次处理3个字节的数据
+  keep alive: 1 # 每次都保持一个服务器的连接，只用一台服务器处理这些请求
 
+28.68% <= 1 milliseconds
+97.99% <= 2 milliseconds
+99.47% <= 3 milliseconds
+99.59% <= 4 milliseconds
+99.62% <= 5 milliseconds
+99.68% <= 6 milliseconds
+99.79% <= 7 milliseconds
+99.90% <= 22 milliseconds
+99.97% <= 23 milliseconds
+100.00% <= 23 milliseconds # 所有的请求在23秒之内完成
+54054.05 requests per second # 平均每秒处理54054.05个请求
+```
 
 基础知识
 redis默认有16个数据库
-
-
 
 默认使用的第0个;
 
 16个数据库为：DB 0~DB 15
 默认使用DB 0 ，可以使用select n切换到DB n，dbsize可以查看当前数据库的大小，与key数量相关。
 
+```bash
 127.0.0.1:6379> config get databases # 命令行查看数据库数量databases
+
 1) "databases"
 2) "16"
 
@@ -288,9 +305,11 @@ redis默认有16个数据库
 OK
 127.0.0.1:6379[8]> dbsize # 查看数据库大小
 (integer) 0
+```
 
-## 不同数据库之间 数据是不能互通的，并且dbsize 是根据库中key的个数。
+不同数据库之间 数据是不能互通的，dbsize 是根据库中key的个数。
 
+```bash
 127.0.0.1:6379> set name sakura 
 OK
 127.0.0.1:6379> SELECT 8
@@ -307,8 +326,11 @@ OK
 3) "name"
 4) "key:__rand_int__"
 5) "myset:__rand_int__"
-127.0.0.1:6379> DBSIZE # size和key个数相关
-(integer) 5
+   127.0.0.1:6379> DBSIZE # size和key个数相关
+   (integer) 5
+```
+
+
 keys * ：查看当前数据库中所有的key。
 
 flushdb：清空当前数据库中的键值对。
@@ -321,7 +343,7 @@ Redis是单线程的，Redis是基于内存操作的。
 
 那么为什么Redis的速度如此快呢，性能这么高呢？QPS达到10W+
 
-Redis为什么单线程还这么快？
+**Redis为什么单线程还这么快？**
 
 误区1：高性能的服务器一定是多线程的？
 误区2：多线程（CPU上下文会切换！）一定比单线程效率高！
@@ -340,6 +362,8 @@ del key：删除键值对
 move key db：将键值对移动到指定数据库
 expire key second：设置键值对的过期时间
 type key：查看value的数据类型
+
+```bash
 127.0.0.1:6379> keys * # 查看当前数据库所有key
 (empty list or set)
 127.0.0.1:6379> set name qinjiang # set key
@@ -347,20 +371,21 @@ OK
 127.0.0.1:6379> set age 20
 OK
 127.0.0.1:6379> keys *
+
 1) "age"
 2) "name"
-127.0.0.1:6379> move age 1 # 将键值对移动到指定数据库
-(integer) 1
-127.0.0.1:6379> EXISTS age # 判断键是否存在
-(integer) 0 # 不存在
-127.0.0.1:6379> EXISTS name
-(integer) 1 # 存在
-127.0.0.1:6379> SELECT 1
-OK
-127.0.0.1:6379[1]> keys *
-1) "age"
-127.0.0.1:6379[1]> del age # 删除键值对
-(integer) 1 # 删除个数
+   127.0.0.1:6379> move age 1 # 将键值对移动到指定数据库
+   (integer) 1
+   127.0.0.1:6379> EXISTS age # 判断键是否存在
+   (integer) 0 # 不存在
+   127.0.0.1:6379> EXISTS name
+   (integer) 1 # 存在
+   127.0.0.1:6379> SELECT 1
+   OK
+   127.0.0.1:6379[1]> keys *
+3) "age"
+   127.0.0.1:6379[1]> del age # 删除键值对
+   (integer) 1 # 删除个数
 
 
 127.0.0.1:6379> set age 20
@@ -380,55 +405,14 @@ OK
 127.0.0.1:6379> get age # 过期的key 会被自动delete
 (nil)
 127.0.0.1:6379> keys *
+
 1) "name"
 
 127.0.0.1:6379> type name # 查看value的数据类型
 string
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-关于TTL命令
+```
+
+**关于TTL命令**
 
 Redis的key，通过TTL命令返回key的过期时间，一般来说有3种：
 
