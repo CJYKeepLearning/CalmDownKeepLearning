@@ -1,0 +1,5 @@
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3A\Experiment3-3A\bin\Debug\Experiment3-3A.exe
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3A\Experiment3-3A\bin\Debug\Experiment3-3A.pdb
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3A\Experiment3-3A\obj\Debug\Experiment3-3A.csprojResolveAssemblyReference.cache
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3A\Experiment3-3A\obj\Debug\Experiment3-3A.exe
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3A\Experiment3-3A\obj\Debug\Experiment3-3A.pdb

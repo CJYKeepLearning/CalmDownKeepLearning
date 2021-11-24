@@ -1,0 +1,4 @@
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3B\Experiment3-3B\bin\Debug\Experiment3-3B.exe
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3B\Experiment3-3B\bin\Debug\Experiment3-3B.pdb
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3B\Experiment3-3B\obj\Debug\Experiment3-3B.exe
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment3-3B\Experiment3-3B\obj\Debug\Experiment3-3B.pdb

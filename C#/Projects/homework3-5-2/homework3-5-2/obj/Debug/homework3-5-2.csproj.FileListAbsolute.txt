@@ -1,0 +1,5 @@
+c:\users\cjy\documents\visual studio 2015\Projects\homework3-5-2\homework3-5-2\bin\Debug\homework3-5-2.exe
+c:\users\cjy\documents\visual studio 2015\Projects\homework3-5-2\homework3-5-2\bin\Debug\homework3-5-2.pdb
+c:\users\cjy\documents\visual studio 2015\Projects\homework3-5-2\homework3-5-2\obj\Debug\homework3-5-2.csprojResolveAssemblyReference.cache
+c:\users\cjy\documents\visual studio 2015\Projects\homework3-5-2\homework3-5-2\obj\Debug\homework3-5-2.exe
+c:\users\cjy\documents\visual studio 2015\Projects\homework3-5-2\homework3-5-2\obj\Debug\homework3-5-2.pdb

@@ -1,0 +1,9 @@
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\bin\Debug\WinForm.exe
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\bin\Debug\WinForm.pdb
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\obj\Debug\WinForm.Form1.resources
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\obj\Debug\WinForm.Form2.resources
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\obj\Debug\WinForm.exe
+c:\users\cjy\documents\visual studio 2015\Projects\WinForm\WinForm\obj\Debug\WinForm.pdb

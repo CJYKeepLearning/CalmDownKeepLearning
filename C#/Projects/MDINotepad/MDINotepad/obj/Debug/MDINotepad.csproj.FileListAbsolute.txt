@@ -1,0 +1,9 @@
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\bin\Debug\MDINotepad.exe
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\bin\Debug\MDINotepad.pdb
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\obj\Debug\MDINotepad.csprojResolveAssemblyReference.cache
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\obj\Debug\MDINotepad.Form1.resources
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\obj\Debug\MDINotepad.MDIForm.resources
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\obj\Debug\MDINotepad.Properties.Resources.resources
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\obj\Debug\MDINotepad.csproj.GenerateResource.Cache
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\obj\Debug\MDINotepad.exe
+c:\users\cjy\documents\visual studio 2015\Projects\MDINotepad\MDINotepad\obj\Debug\MDINotepad.pdb

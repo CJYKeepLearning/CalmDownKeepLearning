@@ -1,0 +1,9 @@
+c:\users\cjy\documents\visual studio 2015\Projects\WindowsDemo\WindowsDemo\bin\Debug\WindowsDemo.exe
+c:\users\cjy\documents\visual studio 2015\Projects\WindowsDemo\WindowsDemo\bin\Debug\WindowsDemo.pdb
+c:\users\cjy\documents\visual studio 2015\Projects\WindowsDemo\WindowsDemo\obj\Debug\WindowsDemo.csprojResolveAssemblyReference.cache
+c:\users\cjy\documents\visual studio 2015\Projects\WindowsDemo\WindowsDemo\obj\Debug\WindowsDemo.Form1.resources
+c:\users\cjy\documents\visual studio 2015\Projects\WindowsDemo\WindowsDemo\obj\Debug\WindowsDemo.Properties.Resources.resources
+c:\users\cjy\documents\visual studio 2015\Projects\WindowsDemo\WindowsDemo\obj\Debug\WindowsDemo.csproj.GenerateResource.Cache
+c:\users\cjy\documents\visual studio 2015\Projects\WindowsDemo\WindowsDemo\obj\Debug\WindowsDemo.exe
+c:\users\cjy\documents\visual studio 2015\Projects\WindowsDemo\WindowsDemo\obj\Debug\WindowsDemo.pdb
+C:\Users\cjy\Documents\Visual Studio 2015\Projects\WindowsDemo\WindowsDemo\obj\Debug\WindowsDemo.FormOpacity.resources

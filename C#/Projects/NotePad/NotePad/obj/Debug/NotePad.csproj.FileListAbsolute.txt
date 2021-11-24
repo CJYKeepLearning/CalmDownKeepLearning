@@ -1,0 +1,8 @@
+c:\users\cjy\documents\visual studio 2015\Projects\NotePad\NotePad\bin\Debug\NotePad.exe
+c:\users\cjy\documents\visual studio 2015\Projects\NotePad\NotePad\bin\Debug\NotePad.pdb
+c:\users\cjy\documents\visual studio 2015\Projects\NotePad\NotePad\obj\Debug\NotePad.csprojResolveAssemblyReference.cache
+c:\users\cjy\documents\visual studio 2015\Projects\NotePad\NotePad\obj\Debug\NotePad.frmTxt.resources
+c:\users\cjy\documents\visual studio 2015\Projects\NotePad\NotePad\obj\Debug\NotePad.Properties.Resources.resources
+c:\users\cjy\documents\visual studio 2015\Projects\NotePad\NotePad\obj\Debug\NotePad.csproj.GenerateResource.Cache
+c:\users\cjy\documents\visual studio 2015\Projects\NotePad\NotePad\obj\Debug\NotePad.exe
+c:\users\cjy\documents\visual studio 2015\Projects\NotePad\NotePad\obj\Debug\NotePad.pdb

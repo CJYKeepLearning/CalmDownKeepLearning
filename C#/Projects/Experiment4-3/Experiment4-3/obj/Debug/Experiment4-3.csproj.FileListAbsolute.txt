@@ -1,0 +1,8 @@
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\bin\Debug\Experiment4-3.exe
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\bin\Debug\Experiment4-3.pdb
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.csprojResolveAssemblyReference.cache
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4_3.Form1.resources
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4_3.Properties.Resources.resources
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.csproj.GenerateResource.Cache
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.exe
+c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.pdb
