@@ -8,3 +8,15 @@ c:\users\cjy\documents\visual studio 2015\Projects\StudentMIS\StudentMIS\obj\Deb
 c:\users\cjy\documents\visual studio 2015\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.Login.resources
 C:\Users\cjy\documents\visual studio 2015\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.Update.resources
 C:\Users\cjy\documents\visual studio 2015\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.Browser.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\bin\Debug\StudentMIS.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\bin\Debug\StudentMIS.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.csproj.AssemblyReference.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.Browser.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.Welcome.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.Login.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.Properties.Resources.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.Update.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.csproj.GenerateResource.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.csproj.CoreCompileInputs.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\StudentMIS\StudentMIS\obj\Debug\StudentMIS.pdb
