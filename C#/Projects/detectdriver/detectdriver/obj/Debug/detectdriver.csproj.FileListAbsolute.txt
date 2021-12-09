@@ -1,0 +1,11 @@
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\bin\Debug\detectdriver.exe.config
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\bin\Debug\detectdriver.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\bin\Debug\detectdriver.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\obj\Debug\detectdriver.csproj.AssemblyReference.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\obj\Debug\detectdriver.csproj.SuggestedBindingRedirects.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\obj\Debug\detectdriver.Form1.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\obj\Debug\detectdriver.Properties.Resources.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\obj\Debug\detectdriver.csproj.GenerateResource.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\obj\Debug\detectdriver.csproj.CoreCompileInputs.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\obj\Debug\detectdriver.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\detectdriver\detectdriver\obj\Debug\detectdriver.pdb
