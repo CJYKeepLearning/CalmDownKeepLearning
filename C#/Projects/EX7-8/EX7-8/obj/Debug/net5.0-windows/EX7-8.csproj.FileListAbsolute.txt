@@ -1,0 +1,17 @@
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\bin\Debug\net5.0-windows\EX7-8.exe
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\bin\Debug\net5.0-windows\EX7-8.deps.json
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\bin\Debug\net5.0-windows\EX7-8.runtimeconfig.json
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\bin\Debug\net5.0-windows\EX7-8.runtimeconfig.dev.json
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\bin\Debug\net5.0-windows\EX7-8.dll
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\bin\Debug\net5.0-windows\ref\EX7-8.dll
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\bin\Debug\net5.0-windows\EX7-8.pdb
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7_8.Form1.resources
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7-8.csproj.GenerateResource.cache
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7-8.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7-8.AssemblyInfoInputs.cache
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7-8.AssemblyInfo.cs
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7-8.csproj.CoreCompileInputs.cache
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7-8.dll
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\ref\EX7-8.dll
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7-8.pdb
+C:\Users\Salvia\source\repos\EX7-8\EX7-8\obj\Debug\net5.0-windows\EX7-8.genruntimeconfig.cache

@@ -1,0 +1,17 @@
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\bin\Debug\net5.0-windows\EX7-10.exe
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\bin\Debug\net5.0-windows\EX7-10.deps.json
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\bin\Debug\net5.0-windows\EX7-10.runtimeconfig.json
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\bin\Debug\net5.0-windows\EX7-10.runtimeconfig.dev.json
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\bin\Debug\net5.0-windows\EX7-10.dll
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\bin\Debug\net5.0-windows\ref\EX7-10.dll
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\bin\Debug\net5.0-windows\EX7-10.pdb
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7_10.Form1.resources
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7-10.csproj.GenerateResource.cache
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7-10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7-10.AssemblyInfoInputs.cache
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7-10.AssemblyInfo.cs
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7-10.csproj.CoreCompileInputs.cache
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7-10.dll
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\ref\EX7-10.dll
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7-10.pdb
+C:\Users\Salvia\source\repos\EX7-10\EX7-10\obj\Debug\net5.0-windows\EX7-10.genruntimeconfig.cache
