@@ -26,10 +26,10 @@ namespace Ex8_4
             listView1.Scrollable = true;            // 需要时显示滚动条 
             listView1.MultiSelect = false;          // 不可以多行选择 
             DirectoryInfo directory = new DirectoryInfo(@"..\..\");
-            listView1.Columns.Add("文件名", 120, HorizontalAlignment.Right);       // 添加文件名列
+            listView1.Columns.Add("文件名", 120, HorizontalAlignment.Right);      // 添加文件名列
             listView1.Columns.Add("大小", 40, HorizontalAlignment.Left);          // 添加大小列
-            listView1.Columns.Add("创建时间", 130, HorizontalAlignment.Left);       // 添加创建时间列
-            foreach (FileInfo finfo in directory.GetFiles())                        // 遍历所有的文件
+            listView1.Columns.Add("创建时间", 130, HorizontalAlignment.Left);     // 添加创建时间列
+            foreach (FileInfo finfo in directory.GetFiles())                      // 遍历所有的文件
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.SubItems.Clear();

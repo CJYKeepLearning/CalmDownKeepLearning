@@ -1,0 +1,11 @@
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\bin\Debug\Ex8_6.exe.config
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\bin\Debug\Ex8_6.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\bin\Debug\Ex8_6.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\obj\Debug\Ex8_6.csproj.AssemblyReference.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\obj\Debug\Ex8_6.csproj.SuggestedBindingRedirects.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\obj\Debug\Ex8_6.Form1.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\obj\Debug\Ex8_6.Properties.Resources.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\obj\Debug\Ex8_6.csproj.GenerateResource.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\obj\Debug\Ex8_6.csproj.CoreCompileInputs.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\obj\Debug\Ex8_6.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex8_6\Ex8_6\obj\Debug\Ex8_6.pdb
