@@ -1,0 +1,11 @@
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\bin\Debug\Ex9_3.exe.config
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\bin\Debug\Ex9_3.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\bin\Debug\Ex9_3.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.csproj.AssemblyReference.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.csproj.SuggestedBindingRedirects.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.Form1.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.Properties.Resources.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.csproj.GenerateResource.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.csproj.CoreCompileInputs.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.pdb
