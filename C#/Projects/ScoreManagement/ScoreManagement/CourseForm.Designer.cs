@@ -35,19 +35,22 @@
             // stuKCDGV
             // 
             this.stuKCDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.stuKCDGV.Location = new System.Drawing.Point(12, 12);
+            this.stuKCDGV.Location = new System.Drawing.Point(11, 10);
+            this.stuKCDGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.stuKCDGV.Name = "stuKCDGV";
+            this.stuKCDGV.RowHeadersWidth = 51;
             this.stuKCDGV.RowTemplate.Height = 30;
-            this.stuKCDGV.Size = new System.Drawing.Size(609, 244);
+            this.stuKCDGV.Size = new System.Drawing.Size(635, 218);
             this.stuKCDGV.TabIndex = 0;
             this.stuKCDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stuKCDGV_CellContentClick);
             // 
             // CourseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 280);
+            this.ClientSize = new System.Drawing.Size(658, 239);
             this.Controls.Add(this.stuKCDGV);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CourseForm";
             this.Text = "学生选课信息";
             this.Load += new System.EventHandler(this.CourseForm_Load);

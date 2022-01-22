@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "64d5750a-154e-453f-bd14-d8d1e82fbbd9": {
+      "ProjectGuid": "64d5750a-154e-453f-bd14-d8d1e82fbbd9",
+      "DisplayName": "WindowsDemo",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

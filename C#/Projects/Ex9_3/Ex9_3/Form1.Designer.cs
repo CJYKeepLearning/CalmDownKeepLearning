@@ -45,6 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvAllStu = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllStu)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             // 
             this.txtCredit.Location = new System.Drawing.Point(298, 105);
             this.txtCredit.Name = "txtCredit";
-            this.txtCredit.Size = new System.Drawing.Size(100, 25);
+            this.txtCredit.Size = new System.Drawing.Size(124, 25);
             this.txtCredit.TabIndex = 12;
             // 
             // dateTimePicker1
@@ -133,7 +134,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(298, 28);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 25);
+            this.txtName.Size = new System.Drawing.Size(124, 25);
             this.txtName.TabIndex = 3;
             // 
             // label2
@@ -212,11 +213,22 @@
             this.dgvAllStu.Size = new System.Drawing.Size(436, 265);
             this.dgvAllStu.TabIndex = 19;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(489, 411);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 28);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "个人明细";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 559);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvAllStu);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnInsert);
@@ -249,6 +261,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvAllStu;
+        private System.Windows.Forms.Button button1;
     }
 }
 

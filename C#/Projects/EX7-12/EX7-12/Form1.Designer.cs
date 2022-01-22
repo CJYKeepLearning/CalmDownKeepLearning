@@ -58,12 +58,14 @@ namespace EX7_12
             this.btnpencil = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.panel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,9 +75,9 @@ namespace EX7_12
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(536, 0);
+            this.panel1.Location = new System.Drawing.Point(561, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(309, 570);
+            this.panel1.Size = new System.Drawing.Size(309, 591);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -84,7 +86,7 @@ namespace EX7_12
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 544);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 565);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(309, 26);
             this.statusStrip1.TabIndex = 3;
@@ -105,7 +107,7 @@ namespace EX7_12
             this.groupBox3.Controls.Add(this.btnYellow);
             this.groupBox3.Controls.Add(this.btnRed);
             this.groupBox3.Controls.Add(this.btnControl);
-            this.groupBox3.Location = new System.Drawing.Point(20, 378);
+            this.groupBox3.Location = new System.Drawing.Point(20, 425);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(277, 163);
             this.groupBox3.TabIndex = 2;
@@ -191,6 +193,7 @@ namespace EX7_12
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.trackBar1);
             this.groupBox2.Controls.Add(this.btnLine5);
             this.groupBox2.Controls.Add(this.btnLine4);
             this.groupBox2.Controls.Add(this.btnLine3);
@@ -198,7 +201,7 @@ namespace EX7_12
             this.groupBox2.Controls.Add(this.btnLine1);
             this.groupBox2.Location = new System.Drawing.Point(20, 165);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(277, 198);
+            this.groupBox2.Size = new System.Drawing.Size(286, 254);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "宽度";
@@ -391,7 +394,7 @@ namespace EX7_12
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(536, 570);
+            this.pictureBox1.Size = new System.Drawing.Size(561, 591);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
@@ -399,11 +402,18 @@ namespace EX7_12
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove_1);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp_1);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(41, 212);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(200, 56);
+            this.trackBar1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 570);
+            this.ClientSize = new System.Drawing.Size(870, 591);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -415,8 +425,10 @@ namespace EX7_12
             this.statusStrip1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,6 +463,7 @@ namespace EX7_12
         private System.Windows.Forms.Button btnFillEllipse;
         private System.Windows.Forms.Button btnEllipse;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 

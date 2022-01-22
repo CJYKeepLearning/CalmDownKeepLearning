@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="v-on指令" v-on:click="doIt">
+    <input type="button" value="v-on简写" @click="doIt">
+    <input type="button" value="v-on双击" @dblclick="doIt">
+</div>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            food:"蛋蛋"
+        },
+        methods:{
+            doIt:function () {
+                alert(this.food);
+            }
+        }
+    })
+</script>
+</body>
+</html>

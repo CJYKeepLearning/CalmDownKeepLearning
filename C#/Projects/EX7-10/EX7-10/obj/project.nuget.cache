@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "xBCYcizXvdVyshgRqxEvT25gw13WSNOdevTEoF0kqeTulHQyaKsVVyUUF9N3jXCOqCIfNStD3K+ni+mPrKhDiw==",
+  "dgSpecHash": "8qT3K9AXwyffMxkb7zmXuPrpZfbsXD+2y0IoXFrt52kA1uKG2XF0eJadthxEU/JtLHL4Nb6EjJqQNZdvq/3qfA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Salvia\\source\\repos\\EX7-10\\EX7-10\\EX7-10.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "F:\\Notes\\CalmDownKeepLearning\\C#\\Projects\\EX7-10\\EX7-10\\EX7-10.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cjy\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
+    "C:\\Users\\cjy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\cjy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\cjy\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

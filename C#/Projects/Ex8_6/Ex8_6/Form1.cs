@@ -180,5 +180,10 @@ namespace Ex8_6
             txtPath.Text = txtPath.Text.Trim() + "\\" + lvFiles.SelectedItems[0].Text;
             ListDirsAndFiles(txtPath.Text.Trim());
         }
+
+        private void 详细资料DToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

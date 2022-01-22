@@ -86,7 +86,7 @@ namespace EX7_12
             btnLine4.BackColor = Color.White;
             btnLine5.BackColor = Color.White;
             ((Button)sender).BackColor = Color.Black;
-            penWidth = Convert.ToInt32(((Button)sender).Tag);
+            penWidth = trackBar1.Value;
         }
 
         private void btnLine2_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace EX7_12
             btnLine4.BackColor = Color.White;
             btnLine5.BackColor = Color.White;
             ((Button)sender).BackColor = Color.Black;
-            penWidth = Convert.ToInt32(((Button)sender).Tag);
+            penWidth = trackBar1.Value;
         }
 
         private void btnLine3_Click(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace EX7_12
             btnLine4.BackColor = Color.White;
             btnLine5.BackColor = Color.White;
             ((Button)sender).BackColor = Color.Black;
-            penWidth = Convert.ToInt32(((Button)sender).Tag);
+            penWidth = trackBar1.Value;
         }
 
         private void btnLine4_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace EX7_12
             btnLine4.BackColor = Color.White;
             btnLine5.BackColor = Color.White;
             ((Button)sender).BackColor = Color.Black;
-            penWidth = Convert.ToInt32(((Button)sender).Tag);
+            penWidth = trackBar1.Value;
         }
 
         private void btnLine5_Click(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace EX7_12
             btnLine4.BackColor = Color.White;
             btnLine5.BackColor = Color.White;
             ((Button)sender).BackColor = Color.Black;
-            penWidth = Convert.ToInt32(((Button)sender).Tag);
+            penWidth = trackBar1.Value;
         }
 
 

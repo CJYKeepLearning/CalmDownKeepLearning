@@ -6,3 +6,5 @@ c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\o
 c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.csproj.GenerateResource.Cache
 c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.exe
 c:\users\cjy\documents\visual studio 2015\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment4-3\Experiment4-3\obj\Debug\Experiment4-3.pdb

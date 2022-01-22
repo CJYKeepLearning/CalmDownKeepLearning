@@ -1,0 +1,15 @@
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\bin\Debug\net6.0\Chapter8_3.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\bin\Debug\net6.0\Chapter8_3.deps.json
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\bin\Debug\net6.0\Chapter8_3.runtimeconfig.json
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\bin\Debug\net6.0\Chapter8_3.dll
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\bin\Debug\net6.0\ref\Chapter8_3.dll
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\bin\Debug\net6.0\Chapter8_3.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\Chapter8_3.csproj.AssemblyReference.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\Chapter8_3.GeneratedMSBuildEditorConfig.editorconfig
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\Chapter8_3.AssemblyInfoInputs.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\Chapter8_3.AssemblyInfo.cs
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\Chapter8_3.csproj.CoreCompileInputs.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\Chapter8_3.dll
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\ref\Chapter8_3.dll
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\Chapter8_3.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\Chapter8_3\Chapter8_3\obj\Debug\net6.0\Chapter8_3.genruntimeconfig.cache

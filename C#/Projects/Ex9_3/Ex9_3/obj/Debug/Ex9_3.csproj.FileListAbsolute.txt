@@ -9,3 +9,4 @@ F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.csproj.Gen
 F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.csproj.CoreCompileInputs.cache
 F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.exe
 F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\Ex9_3\Ex9_3\obj\Debug\Ex9_3.SelfDetail.resources

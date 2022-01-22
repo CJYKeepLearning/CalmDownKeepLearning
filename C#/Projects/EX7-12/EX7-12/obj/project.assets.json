@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Documents\\QQ\\1292585150\\FileRecv\\1\\EX7-12\\EX7-12\\EX7-12.csproj",
+      "projectUniqueName": "F:\\Notes\\CalmDownKeepLearning\\C#\\Projects\\EX7-12\\EX7-12\\EX7-12.csproj",
       "projectName": "EX7-12",
-      "projectPath": "E:\\Documents\\QQ\\1292585150\\FileRecv\\1\\EX7-12\\EX7-12\\EX7-12.csproj",
+      "projectPath": "F:\\Notes\\CalmDownKeepLearning\\C#\\Projects\\EX7-12\\EX7-12\\EX7-12.csproj",
       "packagesPath": "C:\\Users\\cjy\\.nuget\\packages\\",
-      "outputPath": "E:\\Documents\\QQ\\1292585150\\FileRecv\\1\\EX7-12\\EX7-12\\obj\\",
+      "outputPath": "F:\\Notes\\CalmDownKeepLearning\\C#\\Projects\\EX7-12\\EX7-12\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\AppData\\Microsoft Visual Studio\\Shared\\NuGetPackages"

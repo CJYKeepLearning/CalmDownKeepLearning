@@ -14,6 +14,7 @@ namespace Ex9_3
     {
         string strcon = @"Data Source=(localdb)\ProjectModels;Initial Catalog=XSCJDB;Integrated Security=True";
         DataSet myst = new DataSet();
+        SelfDetail frmSelf;
         SqlDataAdapter myda;
         public Form1()
         {
@@ -72,6 +73,35 @@ namespace Ex9_3
                 dgvAllStu.DataSource = myst.Tables["XSB"];
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlcon = new SqlConnection(strcon))
+            {   sqlcon.Open();
+                string sql = "select XH as '学号',XM as '姓名',CSRQ as '生日' from XSB";
+
+                SqlDataAdapter myda = new SqlDataAdapter(sql, sqlcon);
+
+                DataSet myst = new DataSet();
+
+                myda.Fill(myst, "SelfInfo");
+
+                frmSelf = new SelfDetail();
+
+                frmSelf.mDataSet = myst;
+
+                frmSelf.BindingContext = this.BindingContext;
+
+                frmSelf.DataBindings.Add("Text", myst, "SelfInfo.姓名");
+
+                frmSelf.lblStudentNo1.DataBindings.Add("Text", myst, "SelfInfo.学号");
+
+                frmSelf.tbBirthday.DataBindings.Add("Text", myst, "SelfInfo.生日");
+                frmSelf.Show();
+            }
+        }
+
+
     }
 }
 

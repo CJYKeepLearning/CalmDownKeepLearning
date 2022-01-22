@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3d9035fb-9ac5-469e-b2f9-4da63394ad8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/.vs/EX7-10/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/.vs/EX7-10/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/Debug/net5.0-windows/EX7-10.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/Debug/net5.0-windows/EX7-10.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/Debug/net5.0-windows/EX7-10.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/Debug/net5.0-windows/EX7-10.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/Debug/net5.0-windows/EX7-10.designer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/Debug/net5.0-windows/EX7-10.designer.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/EX7-10.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/EX7-10.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/EX7-10.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/EX7-10.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/EX7-10.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/EX7-10.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-10/EX7-10/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/.vs/EX7-12/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/.vs/EX7-12/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/.vs/EX7-12/v17/.futdcache.v1" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/.vs/EX7-12/v17/.futdcache.v1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/.vs/EX7-12/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/.vs/EX7-12/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/bin/Debug/net5.0-windows/EX7-12.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/bin/Debug/net5.0-windows/EX7-12.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/bin/Debug/net5.0-windows/EX7-12.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/bin/Debug/net5.0-windows/EX7-12.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/Debug/net5.0-windows/EX7-12.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/EX7-12.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/EX7-12.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-12/EX7-12/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/.vs/EX7-3/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/.vs/EX7-3/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/bin/Debug/net5.0-windows/EX7-3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/bin/Debug/net5.0-windows/EX7-3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/bin/Debug/net5.0-windows/EX7-3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/bin/Debug/net5.0-windows/EX7-3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/bin/Debug/net5.0-windows/EX7-3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/bin/Debug/net5.0-windows/EX7-3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/bin/Debug/net5.0-windows/EX7-3.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/bin/Debug/net5.0-windows/EX7-3.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/EX7-3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/Debug/net5.0-windows/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/EX7-3.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/EX7-3.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/EX7-3.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/EX7-3.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/EX7-3.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/EX7-3.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-3/EX7-3/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-4/EX7-4/obj/Debug/net5.0-windows/EX7-4.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-4/EX7-4/obj/Debug/net5.0-windows/EX7-4.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/.vs/EX7-5/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/.vs/EX7-5/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/Debug/net5.0-windows/EX7-5.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/Debug/net5.0-windows/EX7-5.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/Debug/net5.0-windows/EX7-5.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/Debug/net5.0-windows/EX7-5.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/Debug/net5.0-windows/EX7-5.designer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/Debug/net5.0-windows/EX7-5.designer.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/EX7-5.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/EX7-5.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/EX7-5.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/EX7-5.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/EX7-5.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/EX7-5.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-5/EX7-5/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/.vs/EX7-8/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/.vs/EX7-8/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/Debug/net5.0-windows/EX7-8.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/Debug/net5.0-windows/EX7-8.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/Debug/net5.0-windows/EX7-8.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/Debug/net5.0-windows/EX7-8.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/Debug/net5.0-windows/EX7-8.designer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/Debug/net5.0-windows/EX7-8.designer.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/EX7-8.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/EX7-8.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/EX7-8.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/EX7-8.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/EX7-8.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/EX7-8.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-8/EX7-8/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/.vs/EX7-9/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/.vs/EX7-9/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/Debug/net5.0-windows/EX7-9.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/Debug/net5.0-windows/EX7-9.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/Debug/net5.0-windows/EX7-9.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/Debug/net5.0-windows/EX7-9.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/Debug/net5.0-windows/EX7-9.designer.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/Debug/net5.0-windows/EX7-9.designer.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/EX7-9.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/EX7-9.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/EX7-9.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/EX7-9.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/EX7-9.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/EX7-9.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/EX7-9/EX7-9/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_4/.vs/Ex8_4/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_4/.vs/Ex8_4/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_4/Ex8_4/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_4/Ex8_4/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_4/Ex8_4/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_4/Ex8_4/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_4/Ex8_4/obj/Debug/Ex8_4.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_4/Ex8_4/obj/Debug/Ex8_4.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_5/.vs/Ex8_5/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_5/.vs/Ex8_5/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_5/Ex8_5/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_5/Ex8_5/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_6/.vs/Ex8_6/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_6/.vs/Ex8_6/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_6/Ex8_6/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_6/Ex8_6/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_6/Ex8_6/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_6/Ex8_6/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex8_6/Ex8_6/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex8_6/Ex8_6/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_2/.vs/Ex9_2/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_2/.vs/Ex9_2/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/.vs/Ex9_3/project-colors.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/.vs/Ex9_3/project-colors.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/.vs/Ex9_3/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/.vs/Ex9_3/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/Ex9_3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/Ex9_3.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/bin/Debug/Ex9_3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/bin/Debug/Ex9_3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/bin/Debug/Ex9_3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/bin/Debug/Ex9_3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Ex9_3/Ex9_3/obj/Debug/Ex9_3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/.vs/Experiment4-2A/v14/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Experiment4-2A.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Form1.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Form1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Form1.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/MyForm.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/MyForm.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/MyForm.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Properties/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Properties/Resources.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Properties/Resources.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Properties/Settings.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/Properties/Settings.settings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/bin/Debug/Experiment4-2A.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/bin/Debug/Experiment4-2A.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/bin/Debug/Experiment4-2A.vshost.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/bin/Debug/Experiment4-2A.vshost.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/Experiment4-2A.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/Experiment4-2A.csproj.GenerateResource.Cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/Experiment4-2A.csprojResolveAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/Experiment4-2A.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/Experiment4-2A.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/Experiment4_2A.Form1.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/Experiment4_2A.MyForm.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-2A/Experiment4-2A/obj/Debug/Experiment4_2A.Properties.Resources.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-3/.vs/Experiment4-3/v14/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Experiment4-3/.vs/Experiment4-3/v14/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-3/Experiment4-3/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Experiment4-3/Experiment4-3/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/Experiment4-3/Experiment4-3/obj/Debug/Experiment4-3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/Experiment4-3/Experiment4-3/obj/Debug/Experiment4-3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/.vs/ScoreManagement/v14/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/.vs/ScoreManagement/v14/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/.vs/ScoreManagement/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/.vs/ScoreManagement/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/CourseForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/CourseForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/Form1.resx" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/Form1.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/ModifyForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/ModifyForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/ScoreForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/ScoreForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/ScoreForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/ScoreForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/ScoreManagement.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/ScoreManagement.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/SearchForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/SearchForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/bin/Debug/ScoreManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/bin/Debug/ScoreManagement.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/bin/Debug/ScoreManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/bin/Debug/ScoreManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.Form1.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.Form1.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/ScoreManagement/ScoreManagement/obj/Debug/ScoreManagement.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/StudentMIS/.vs/StudentMIS/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/StudentMIS/.vs/StudentMIS/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/Properties/Settings.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/StudentMIS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/StudentMIS.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/obj/Debug/StudentMIS.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/obj/Debug/StudentMIS.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/StudentMIS/StudentMIS/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/Properties/Settings.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/WinForm.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/WinForm.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WinForm/WinForm/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/Properties/Resources.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/Properties/Resources.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/Properties/Settings.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/Properties/Settings.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/WindowsDemo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/WindowsDemo.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WindowsDemo/WindowsDemo/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/DesignTimeResolveAssemblyReferences.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/DesignTimeResolveAssemblyReferences.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C#/Projects/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../C#/Projects/WindowsFormsApplication1/WindowsFormsApplication1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../languages/Python/Python.md" beforeDir="false" afterPath="$PROJECT_DIR$/../languages/Python/Python.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="23cp8wqpSMl4xlLYEjrIkVCjKvc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Web开发技术" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d9035fb-9ac5-469e-b2f9-4da63394ad8f" name="Default Changelist" comment="" />
+      <created>1642043073734</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642043073734</updated>
+      <workItem from="1642043077275" duration="69000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1642043144395">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1642043144395" />
+  </component>
+</project>

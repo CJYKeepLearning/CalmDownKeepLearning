@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <img src="../img/1.jpg" v-show="isShow">
+    <input type="button" value="随时变吗" @click="changeIsShow"></input>
+</div>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            isShow:true,
+            age:17
+        },
+        methods:{
+            changeIsShow:function () {
+                this.isShow = !this.isShow;
+            }
+        }
+    })
+</script>
+</body>
+</html>

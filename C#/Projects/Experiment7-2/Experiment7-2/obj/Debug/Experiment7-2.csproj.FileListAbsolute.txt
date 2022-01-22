@@ -1,0 +1,11 @@
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\bin\Debug\Experiment7-2.exe.config
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\bin\Debug\Experiment7-2.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\bin\Debug\Experiment7-2.pdb
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\obj\Debug\Experiment7-2.csproj.AssemblyReference.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\obj\Debug\Experiment7-2.csproj.SuggestedBindingRedirects.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\obj\Debug\Experiment7_2.Form1.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\obj\Debug\Experiment7_2.Properties.Resources.resources
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\obj\Debug\Experiment7-2.csproj.GenerateResource.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\obj\Debug\Experiment7-2.csproj.CoreCompileInputs.cache
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\obj\Debug\Experiment7-2.exe
+F:\Notes\CalmDownKeepLearning\C#\Projects\Experiment7-2\Experiment7-2\obj\Debug\Experiment7-2.pdb

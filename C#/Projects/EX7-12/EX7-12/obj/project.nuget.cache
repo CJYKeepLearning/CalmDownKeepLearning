@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+Ib/RiDxNdtq0j7LWamtiLqtQAL6EmLyc2N4hfSfFscvZJh0467jcnvcT5oKf0J2cMD4Bi+JWZd2N74xcCRirA==",
+  "dgSpecHash": "bzBLOqicAqlod+d8boHBffZH7HiiDFf2Gr9fIfTWq7CLA02xG5ONYYijLEyJL5E1iOSQ2uNixtxEgUQ3zF7Z2g==",
   "success": true,
-  "projectFilePath": "E:\\Documents\\QQ\\1292585150\\FileRecv\\1\\EX7-12\\EX7-12\\EX7-12.csproj",
+  "projectFilePath": "F:\\Notes\\CalmDownKeepLearning\\C#\\Projects\\EX7-12\\EX7-12\\EX7-12.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cjy\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
     "C:\\Users\\cjy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
