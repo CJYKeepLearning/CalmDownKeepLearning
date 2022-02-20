@@ -1,0 +1,11 @@
+{
+    "name": "myFoling-tools",
+    "version": "1.0.0",
+    "main": "index.js",
+    "description": "提供自己使用的功能",
+    "keywords": [
+        "myFoling",
+        ""
+    ],
+    "license": "ISC"
+}
