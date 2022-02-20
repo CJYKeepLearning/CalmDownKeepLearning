@@ -3,13 +3,22 @@
 ## Web项目流程:
 
 1. 项目根目录中 npm install -y 初始化
+
 2. 创建 app.js  导入express模块，进行初始化
+
 3. 创建router 和 router_handler 文件夹 
+
 4. 创建db 进行连接数据库 和 身份认证
+
 5. 写 router
+
 6. 封装res.cc 函数 用中间件
+
 7. 输入的username 和 password检测
+
 8. 捕获数据验证错误 注册中间件
+
+   **参考apiserver文档**
 
 ## fs模块
 
@@ -620,3 +629,21 @@ npm i @escook/express-joi
 ```javascript
 npm install joi
 ```
+
+## 总结
+
+三天学完
+
+着实有点慢
+
+api.server为一个案例
+
+其余为模块
+
+一些解释:
+
+node_modules为下载的模块
+
+package.json为版本记录信息
+
+package-lock.json 为版本记录信息
