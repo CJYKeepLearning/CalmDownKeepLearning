@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>model</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <!--这里！！ 可以与数据库进行交互-->
+    <input type="text" v-model="message" @keyup.enter="change">
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data:{
+            message:"foling"
+        },
+        methods:{
+            change:function(){
+                alert(this.message)
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

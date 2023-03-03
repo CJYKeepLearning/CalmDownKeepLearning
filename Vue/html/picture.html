@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>picture</title>
+    <link rel="stylesheet" href="../css/picture.css" />
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="mask">
+    <div class="center">
+        <a href="javascript:void(0)" class="left" >
+            <img src="../img/prev.png" @click="prev" alt="">
+        </a>
+        <img :src="picArray[index]">
+        <a href="javascript:void(0)" class="right" >
+            <img src="../img/next.png" @click="prev" alt="">
+        </a>    </div>
+</div>
+<script>
+    var app = new Vue({
+        el:"#mask",
+        data:{
+            picArray:["../img/1.jpg","../img/2.jpg","../img/3.jpg"],
+            index:0
+        },
+        methods:{
+            prev:function(){
+                this.index = (this.index+2)%3;
+            },
+            next:function(){
+                this.index = (this.index+4)%3;
+            }
+        }
+    })
+</script>
+</body>
+</html>

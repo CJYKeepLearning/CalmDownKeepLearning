@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>on</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="点击" @click="doIt(123,'foling')">
+    <input type="text" @keyup.enter="say">
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        methods:{
+            doIt:function(p1){
+                alert(p1)
+            },
+            say:function(){
+                alert("say hiiiii");
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weather</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/weather.css" />
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="app" class="wrap">
+    <div class="form_group">
+        <input type="text" class="input_txt" v-model="city" @keyup.enter="searchWeather" placeholder="请输入">
+        <button class="input_sub" @click="searchWeather">搜索</button>
+    </div>
+    <div class="hotkey">
+        <a href="javascript:;" @click="changeCity('北京')">北京</a>
+        <a href="javascript:;" @click="changeCity('天津')">天津</a>
+        <a href="javascript:;" @click="changeCity('西安')">西安</a>
+    </div>
+    <ul class="weather_list">
+        <li v-for="item in weatherList">
+            <div class="info_type">
+                <span class="iconfont">{{item.type}}</span>
+            </div>
+            <div class="info_temp">
+                <b>{{item.low}}</b>
+                ~
+                <b>{{item.high}}</b>
+            </div>
+            <div class="info_date">
+                <span >{{item.date}}</span>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!--导入JS-->
+<script src="../js/weather.js">
+</script>
+
+</body>
+</html>

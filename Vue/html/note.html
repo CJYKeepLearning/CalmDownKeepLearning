@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>on</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="../css/note.css" />
+</head>
+<body>
+    <section id="todoapp">
+        <header class="header">
+            <h1>记事本</h1>
+            <!--输入-->
+            <input autofocus="autofocus" autocomplete="off" placeholder="请输入"
+            class="new-todo" v-model="newtd" @keyup.enter="add">
+        </header>
+        <!--列表区域-->
+        <section class="main">
+            <ul class="todo-list">
+                <li class="todo" v-for="(item,index) in list">
+                    <div class="view">
+                        <span class="index">{{index}}</span>
+                        <label>{{item}}</label>
+                        <button class="destroy" @click="remove(index)"></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!--统计和清空-->
+        <footer class="footer">
+            <span class="todo-count" v-if="list.length !=0 ">
+                <strong>{{list.length}}</strong>
+                 items left 
+            </span>
+            <button v-show="list.length!=0" class="clear-completed" @click="clear">
+                Clear
+            </button>
+        </footer>
+    </section>
+
+    <footer class="info"></footer>
+<script>
+    var app = new Vue({
+        el: "#todoapp",
+        data:{
+            newtd:"",
+            list:[
+                "写代码",
+                "学英语",
+                "考研"
+            ]
+        },
+        methods:{
+            add:function(){
+                this.list.push(this.newtd)
+                this.newtd = ""
+            },
+            remove:function(index){
+                //Splice 点击删除
+                this.list.splice(index,1)
+            },
+            clear:function(){
+                this.list = []
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

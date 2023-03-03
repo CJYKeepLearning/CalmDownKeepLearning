@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bind</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .active{
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--这里-->
+    <img v-bind:src="imgSrc" :title="imgTitle+'!!!'" :class="{active:isActive}" alt="">
+    <input type="button" value="随时变吗" @click="toggleActive"></input>
+</div>
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            isShow:true,
+            age:17,
+            imgSrc:"../img/1.jpg",
+            imgTitle:"foling",
+            isActive:false
+        },
+        methods:{
+            toggleActive:function(){
+                this.isActive = !this.isActive;
+            }
+        }
+    })
+</script>
+</body>
+</html>

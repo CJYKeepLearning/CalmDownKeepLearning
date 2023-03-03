@@ -1,0 +1,20 @@
+{
+  "name": "foling",
+  "age": 19,
+  "sex": "female",
+  "address": {
+    "street": "宝庆里",
+    "city": "天津",
+    "country": "china"
+  },
+  "links": [
+    {
+      "name": "bilibili",
+      "url": "https://www.bilibili.com/?spm_id_from=333.999.b_696e7465726e6174696f6e616c486561646572.1"
+    },
+    {
+      "name": "bilibili2",
+      "url": "https://www.bilibili.com/?spm_id_from=333.999.b_696e7465726e6174696f6e616c486561646572.1"
+    }
+  ]
+}

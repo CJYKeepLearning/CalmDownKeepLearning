@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>on</title>
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="获取笑话" @click="getJoke">
+        <p></p>
+        <h5> {{joke}}</h5>
+    </div>
+<script>
+    /*
+    接口一：随机笑话
+    */
+   var app = new Vue({
+       el:"#app",
+       data:{
+           joke:"好笑吗"
+       },
+       methods:{
+            getJoke:function(){
+                //axios回调函数中的this已经改变，无法访问到data中的数据。赋给that
+                var that = this;
+                axios.get("https://autumnfish.cn/api/joke")
+                .then(function(response){
+                    that.joke = response.data
+                }),function(err){
+                    console.log(err);
+                }
+            }
+       }
+   })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>picture</title>
+    <link rel="stylesheet" href="../css/picture.css" />
+    <script src="http://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <ol>
+        <!--这里！-->
+        <li v-for="(item,i) in arr">
+            {{i}} = {{item}}
+        </li>
+    </ol>
+    <br>
+    <ul>
+        <li v-for="item in objArr">
+            name = {{item.name}}
+            age = {{item.age}}
+        </li>
+    </ul>
+    <input type="button" value="add" @click="add">
+    <input type="button" value="remove" @click="remove">
+</div>
+
+<script>
+    var app = new Vue({
+        el:"#app",
+        data:{
+            arr:[1,2,3,4,5],
+            objArr:[
+                {name:"f1",age:10},
+                {name:"f2",age:11},
+                {name:"f3",age:12}
+            ]
+        },
+        methods:{
+            add:function(){
+                this.objArr.push({name:"f4",age:17})
+            },
+            remove:function(){
+                this.objArr.shift();
+            }
+        }
+    })
+</script>
+</body>
+</html>
