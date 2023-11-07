@@ -96,7 +96,33 @@
           <el-button type="warning" @click="reset">重置</el-button>
         </div>
         <div style="margin: 10px 0">
+          <!--新增-->
           <el-button type="primary" @click="handleAdd">新增<i class="el-icon-circle-plus-outline"></i></el-button>
+          <!--新增窗口-->
+          <el-dialog title="用户信息" :visible.sync="dialogFormVisible" width="30%">
+            <el-form label-width="80px" size="small">
+              <el-form-item label="用户名">
+                <el-input v-model="form.username" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="昵称">
+                <el-input v-model="form.nickname" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="邮箱">
+                <el-input v-model="form.email" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="电话">
+                <el-input v-model="form.phone" auto-complete="off"></el-input>
+              </el-form-item>
+              <el-form-item label="地址">
+                <el-input v-model="form.address" auto-complete="off"></el-input>
+              </el-form-item>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+              <el-button @click="dialogFormVisible=false">取消</el-button>
+              <el-button type="primary" @click="save">确定</el-button>
+            </div>
+          </el-dialog>
+          <!--删除-->
           <el-popconfirm
               class="ml-5"
               confirm-button-text='确定'
@@ -108,10 +134,13 @@
           >
           <el-button type="danger" slot="reference">批量删除<i class="el-icon-remove-outline"></i></el-button>
           </el-popconfirm>
+
+         <!--导入-->
           <el-button type="primary">导入<i class="el-icon-bottom"></i></el-button>
           <el-button type="primary">导出<i class="el-icon-top"></i></el-button>
         </div>
-        <el-table :data="tableData" border stripe :header-cell-class-name="headerBg">
+        <el-table :data="tableData" border stripe :header-cell-class-name="headerBg" @selection-change="handleSelectionChange">
+          <el-table-column type="selection" width="55"></el-table-column>
           <el-table-column prop="id" label="ID" width="80">
           </el-table-column>
           <el-table-column prop="username" label="姓名" width="120">
@@ -125,6 +154,7 @@
           <el-table-column label="操作" width="200px" align="center">
             <template slot-scope="scope">
               <el-button type="success" @click="handleEdit(scope.row)">编辑 <i class="el-icon-edit"></i></el-button>
+              <!--删除---->
               <el-popconfirm
                   class="ml-5"
                   confirm-button-text='确定'
@@ -139,8 +169,8 @@
             </template>
           </el-table-column>                                                                                                                                                                                                                                                               
         </el-table>
+
         <div class="block">
-          <span class="demonstration">完整功能</span>
           <el-pagination
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
@@ -185,6 +215,7 @@ export default {
       username:"",
       email:"",
       address:"",
+      multipleSelection:[],
       collapseBtnClass: 'el-icon-s-fold',
       isCollapse:false,
       sideWidth:200,
@@ -227,14 +258,52 @@ export default {
     reset(){
       this.username = "",
       this.email = "",
-      this.address = ""
+      this.address = "",
+      this.load()
     },
     //新增
     handleAdd(){
       this.dialogFormVisible = true
       this.form={}
     },
-        
+    save(){
+      request.post("http://localhost:9090/user",this.form).then(res=>{
+        if(res){
+          this.$message.success("保存成功")
+          this.dialogFormVisible = false
+          this.load()
+        }else{
+          this.$message.error("保存失败")
+        }
+      })
+    },
+    //删除
+    del(id){
+      request.delete("http://localhost:9090/user/"+id).then(res=>{
+        if(res){
+          this.$message.success("删除成功")
+          this.load()
+        }else{
+          this.$message.error("删除失败")
+        }
+      })
+    },
+    delBatch(){
+      let ids = this.multipleSelection.map(v => v.id)
+      request.post("http://localhost:9090/user/del/batch",ids).then(res=>{
+        if(res){
+          this.$message.success("批量删除成功")
+          this.load()
+        }else{
+          this.$message.error("批量删除失败")
+        }
+      })
+    },
+    handleSelectionChange(val){
+      console.log(val),
+      this.multipleSelection = val
+    }
+    ,
     handleEdit(row){
       this.form = row
       this.dialogFormVisible = true
