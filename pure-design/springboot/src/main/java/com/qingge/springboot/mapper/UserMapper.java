@@ -1,10 +1,16 @@
 package com.qingge.springboot.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.qingge.springboot.entity.User;
-import org.apache.ibatis.annotations.*;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
-import java.util.List;
-
+/**
+ * <p>
+ *  Mapper 接口
+ * </p>
+ *
+ * @author foling
+ * @since 2023-11-07
+ */
 public interface UserMapper extends BaseMapper<User> {
+
 }
