@@ -1,56 +1,21 @@
 package labuladong;
 
-import java.util.LinkedList;
-import java.util.List;
+import org.omg.PortableInterceptor.INACTIVE;
 
+import java.lang.reflect.Array;
+import java.util.*;
 public class Test {
-    static int coinChange(int[] coins, int amount){
-        // dp[i]= x 当目标金额为i时，至少需要x枚硬币
-        int[] dp = new int[amount+1];
-        for (int i = 0; i < dp.length; i++) {
-            dp[i] = amount+1;
-        }
+    int maxA(int N){
+        int[] dp = new int[N+1];
         dp[0] = 0;
-        for (int i =0; i<dp.length;i++){
-            for (int coin:coins){
-                if (i - coin < 0) continue;
-                dp[i] = Integer.min(dp[i],1+dp[i-coin]);
+        for (int i = 1; i <=N ; i++) {
+            dp[i] = dp[i-1]+1;
+            for (int j=2;j<i;j++){
+                dp[i] = Math.max(dp[i],dp[j-2]*(i-j+1));
             }
         }
-        return dp[amount] == amount+1 ? -1:dp[amount];
-    }
-    List<List<Integer>> res = new LinkedList<>();
-    int[][] board;
-    List<List<Integer>> nQueen(int nums){
-        LinkedList<Integer> track = new LinkedList<>();
-        board = new int[nums][nums];
-        backtrack(nums,track);
-        System.out.println(res);
-        return res;
-    }
-    void backtrack(int n, LinkedList<Integer> track){
-        if (track.size() == n){
-            res.add(new LinkedList<>(track));
-            return;
-        }
-        for (int i = 0; i < n; i++) {
-            if (okPut(n,i)){
-                board[n][i] = 1;
-                track.add(i);
-                backtrack(n+1,track);
-                board[n][i] = 0;
-                track.removeLast();
-            }
-
-        }
+        return dp[N];
+        
     }
 
-    private boolean okPut(int n, int i) {
-        for (int j = 0; j < n; j++) {
-            if (board[j][i] == 1 || board[j][i-j] == 1)
-                return false;
-
-        }
-        return true;
-    }
 }
