@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>GraphVis基础使用示例</title>
+    <script src="http://media.graphvis.cn/libs/jquery-3.3.1.min.js"></script>
+    <!-- 界面引入GraphVis可视化核心组件库 -->
+    <script src="http://media.graphvis.cn/libs/graphvis.20220327.min.js"></script>
+    <!-- 界面引入GraphVis布局算法组件库 -->
+    <script src="http://media.graphvis.cn/libs/graphvis.layout.min.js"></script>
+</head>
+<body>
+<!-- 定义画布展示元素,id将被用来设置可视化区域，需要指定width和height样式 -->
+<div id="graph-panel" style="width:100%;height:calc(100vh - 16px);background-color:#efefef;"></div>
+
+<script type="text/javascript">
+    //GraphVis可视化对象通用配置项
+    var config = {
+        node: { //节点的默认配置
+            label: { //标签配置
+                show: true, //是否显示
+                color: '20,20,20', //字体颜色
+                font: 'normal 14px Arial', //字体大小及类型
+                textPosition: 'Bottom_Center' //文字位置 Top_Center,Bottom_Center,Middle_Right,Middle_Center
+            },
+            shape: 'circle'
+        },
+        link: { //连线的默认配置
+            lineType: 'direct', //连线类型,direct,curver,vlink,hlink,vbezier,hbezier,bezier
+            colorType: 'source', //连线颜色类型 source:继承source颜色,target:继承target颜色 both:用双边颜色，defined:自定义
+            alpha: 1, // 连线透明度
+            showArrow: false, //显示连线箭头
+        },
+        wheelZoom: 0.8, //开启鼠标滚轮缩放
+        highLightNeiber: true //相邻节点高亮开关
+    };
+
+    //1、创建GraphVis对象，进行方法调用
+    var visgraph = new VisGraph(document.getElementById('graph-panel'), config);
+
+    //2、获取服务端数据并绘制关系图
+    $.getJSON('demoData/karate.json',function(demoData) {
+        visgraph.drawData(demoData);//绘制关系数据
+
+        runLayout(visgraph.getGraphData());//1.5秒后执行圆形布局
+    });
+
+    //3、动画帧控制布局计算次数，每一次计算标识布局一次
+    function runLayout(graphData){
+        var layout = new LayoutFactory(graphData).createLayout('kk');
+        layout.resetConfig({
+            realSize:1500 //区域大小
+        });
+
+        var runLoopNum = 0;
+        while(runLoopNum++ < 100){
+            layout.runLayout();//执行布局计算
+        }
+        visgraph.setZoom('auto');//自动缩放
+    };
+</script>
+</body>
+</html>
